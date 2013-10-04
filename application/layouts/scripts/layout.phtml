@@ -1,0 +1,35 @@
+<?php
+    header('Content-type: text/html; charset=utf-8');
+    echo $this->doctype();
+    $auth = Zend_Auth::getInstance();
+?>
+<html>
+<head>
+    <?php
+        echo $this->headTitle();
+        echo $this->headMeta();
+        echo $this->headScript();
+        echo $this->headLink();
+    ?>
+</head>
+<body>
+<ul class="">
+    <li class=""></li>
+    <?php if ($auth->hasIdentity()){?>
+        <li>
+            <a href="" title="Мой профиль">
+                <?php echo (!empty($auth->getIdentity()->usersLogin))?
+                    $auth->getIdentity()->usersLogin : $auth->getIdentity()->usersLogin
+                ?>
+            </a>
+        </li>
+        <li><a href="<?php echo $this->url(array(), 'user-logout') ?>">Выйти</a></li>
+    <?php } else { ?>
+        <li><a href="<?php echo $this->url(array(), 'user-login') ?>" id="login">Войти</a></li>
+    <?php } ?>
+</ul>
+<?php
+    echo $this->layout()->content;
+?>
+</body>
+</html>
