@@ -10,22 +10,8 @@ class UserController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
-    }
-
-    public function authAction()
-    {
-        // action body
-    }
-
-    public function addAction()
-    {
-        // action body
-    }
-
-    public function updateAction()
-    {
-        // action body
+        $users = new Application_Model_DbTable_UsersInfo();
+        $this->view->users = $users->getAllUsers();
     }
 
     public function loginAction()
@@ -74,6 +60,86 @@ class UserController extends Zend_Controller_Action
         if ($auth->hasIdentity())
             $auth->clearIdentity ();
         $this->_redirect($this->view->baseUrl());
+    }
+
+    public function getInfoAction()
+    {
+        $id = $this->_getParam('id');
+        $user = new Application_Model_DbTable_UsersInfo();
+        $currentUser = $user->getUser($id);
+        $idUsers = $currentUser['id'];
+        $idUsersRole = $currentUser['idUsersRole'];
+        $idStatus = $currentUser['idStatus'];
+        $loginPass = new Application_Model_DbTable_UsersLogin();
+        $currentUsersLoginPass = $loginPass->getUsersLoginPass($idUsers);
+        $role = new Application_Model_DbTable_UsersRole();
+        $currentUsersRole = $role->getUsersRole($idUsersRole);
+        $status = new Application_Model_DbTable_Status();
+        $currentUsersStatus = $status->getStatus($idStatus);
+        $this->view->usersInfo = array('user'=>$currentUser, 'loginPass'=>$currentUsersLoginPass,
+                                        'role'=>$currentUsersRole, 'status'=>$currentUsersStatus);
+    }
+
+    public function addAction()
+    {
+        $form = new Application_Form_AddUser();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $allValues = $form->getValues();
+
+                $loginValues = array('usersLogin'=>null, 'usersPassword'=>null);
+                $infoValues = array_diff_key($allValues, $loginValues);
+                $loginValues = array_diff_key($allValues, $infoValues);
+
+                $user = new Application_Model_DbTable_UsersInfo();
+                $user->addUsersInfo($infoValues);
+
+                $currentUser = $user->getIdUser($infoValues['inn']);
+                $loginValues['idUsersInfo'] = $currentUser['id'];
+                $loginPass = new Application_Model_DbTable_UsersLogin();
+                $loginPass->addUsersLoginPass($loginValues);
+
+                //$this->_helper->layout()->message = 'Вы добавили пользователя ' . $this->_request->getParam('usersLogin') .'!';
+                //$this->_helper->layout()->message_class = 'alert-success';
+                return $this->_forward('index');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function editAction()
+    {
+        $form = new Application_Form_AddUser();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $allValues = $form->getValues();
+                $id = $this->_getParam('id');
+
+                $loginValues = array('usersLogin'=>null, 'usersPassword'=>null);
+                $infoValues = array_diff_key($allValues, $loginValues);
+                $loginValues = array_diff_key($allValues, $infoValues);
+
+                $user = new Application_Model_DbTable_UsersInfo();
+                $user->editUsersInfo($id, $infoValues);
+                $loginValues['idUsersInfo'] = $id;
+
+                $loginPass = new Application_Model_DbTable_UsersLogin();
+                $loginPass->editUsersLoginPass($id, $loginValues);
+
+                return $this->_forward('index');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $user = new Application_Model_DbTable_UsersInfo();
+                    $loginPass = new Application_Model_DbTable_UsersLogin();
+                    $form->populate($loginPass->getUsersLoginPass($id));
+                    $form->populate($user->getUser($id));
+                }
+            }
+        }
+        $this->view->form = $form;
     }
 
 

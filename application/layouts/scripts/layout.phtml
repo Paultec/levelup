@@ -1,21 +1,20 @@
 <?php
-    header('Content-type: text/html; charset=utf-8');
-    echo $this->doctype();
-    $auth = Zend_Auth::getInstance();
+//header('Content-type: text/html; charset=utf-8');
+echo $this->doctype();
+$auth = Zend_Auth::getInstance();
 ?>
 <html>
 <head>
     <?php
-        echo $this->headTitle();
-        echo $this->headMeta();
-        echo $this->headScript();
-        echo $this->headLink();
+    echo $this->headTitle();
+    echo $this->headMeta();
+    echo $this->headScript();
+    echo $this->headLink();
     ?>
 </head>
 <body>
 <ul class="">
-    <li class=""></li>
-    <?php if ($auth->hasIdentity()){?>
+    <?php if ($auth->hasIdentity()){ echo 'Вы'; ?>
         <li>
             <a href="" title="Мой профиль">
                 <?php echo (!empty($auth->getIdentity()->usersLogin))?
@@ -24,12 +23,15 @@
             </a>
         </li>
         <li><a href="<?php echo $this->url(array(), 'user-logout') ?>">Выйти</a></li>
+        <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'index')) ?>">Смотреть пользователей</a></li>
+        <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'add')) ?>">Добавить пользователя</a></li>
+        <li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'index')) ?>">Перейти к разделу данных</a></li>
     <?php } else { ?>
         <li><a href="<?php echo $this->url(array(), 'user-login') ?>" id="login">Войти</a></li>
     <?php } ?>
 </ul>
 <?php
-    echo $this->layout()->content;
+echo $this->layout()->content;
 ?>
 </body>
 </html>

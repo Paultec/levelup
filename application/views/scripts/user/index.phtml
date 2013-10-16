@@ -1,4 +1,21 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>User</b> and script/action name <b>index</b></p>
-</div>
+<?php if (count($this->users)) { ?>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>UserId</th>
+            <th>Role</th>
+            <th>UserName</th>
+            <th>UserEmail</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php echo $this->PartialLoop('/partials/users-row.phtml', $this->users) ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div>
+        Нет пользователей
+    </div>
+<?php } ?>

@@ -9,24 +9,56 @@
       <controllersDirectory>
         <controllerFile controllerName="Index">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="getScheduleByClassroom"/>
         </controllerFile>
         <controllerFile controllerName="Error"/>
         <controllerFile controllerName="User">
           <actionMethod actionName="index"/>
-          <actionMethod actionName="auth"/>
-          <actionMethod actionName="add"/>
-          <actionMethod actionName="update"/>
+          <actionMethod actionName="getInfo"/>
           <actionMethod actionName="login"/>
           <actionMethod actionName="logout"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
+        </controllerFile>
+        <controllerFile controllerName="Students">
+          <actionMethod actionName="index"/>
+        </controllerFile>
+        <controllerFile controllerName="Data">
+          <actionMethod actionName="index"/>
+          <actionMethod actionName="getAllClassrooms"/>
+          <actionMethod actionName="getClassroom"/>
+          <actionMethod actionName="editClassroom"/>
+          <actionMethod actionName="deleteClassroom"/>
+          <actionMethod actionName="addClassroom"/>
+          <actionMethod actionName="getScheduleByClassroom"/>
+          <actionMethod actionName="getScheduleByUser"/>
+          <actionMethod actionName="getScheduleByGroup"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
         <formFile formName="Auth"/>
+        <formFile formName="AddUser"/>
+        <formFile formName="Classroom"/>
       </formsDirectory>
-      <layoutsDirectory enabled="false"/>
+      <layoutsDirectory>
+        <layoutScriptsDirectory>
+          <layoutScriptFile layoutName="layout"/>
+        </layoutScriptsDirectory>
+      </layoutsDirectory>
       <modelsDirectory>
         <dbTableDirectory>
+          <dbTableFile dbTableName="Status"/>
+          <dbTableFile dbTableName="UsersInfo"/>
           <dbTableFile dbTableName="UsersLogin"/>
+          <dbTableFile dbTableName="UsersRole"/>
+          <dbTableFile dbTableName="Classroom"/>
+          <dbTableFile dbTableName="Groups"/>
+          <dbTableFile dbTableName="Payments"/>
+          <dbTableFile dbTableName="SubAndSpec"/>
+          <dbTableFile dbTableName="Schedule"/>
+          <dbTableFile dbTableName="Specialisation"/>
+          <dbTableFile dbTableName="Students"/>
+          <dbTableFile dbTableName="Subjects"/>
         </dbTableDirectory>
       </modelsDirectory>
       <modulesDirectory enabled="false"/>
@@ -43,19 +75,52 @@
             <viewScriptFile forActionName="index"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
-            <viewScriptFile forActionName="auth"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="User">
-            <viewScriptFile forActionName="add"/>
-          </viewControllerScriptsDirectory>
-          <viewControllerScriptsDirectory forControllerName="User">
-            <viewScriptFile forActionName="update"/>
+            <viewScriptFile forActionName="getInfo"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="login"/>
           </viewControllerScriptsDirectory>
           <viewControllerScriptsDirectory forControllerName="User">
             <viewScriptFile forActionName="logout"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="index"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getAllClassrooms"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getClassroom"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="editClassroom"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="deleteClassroom"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="addClassroom"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Index">
+            <viewScriptFile forActionName="getScheduleByClassroom"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getScheduleByClassroom"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getScheduleByUser"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getScheduleByGroup"/>
           </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
@@ -91,7 +156,32 @@
       <testPHPUnitBootstrapFile filesystemName="bootstrap.php"/>
       <testApplicationDirectory>
         <testApplicationControllerDirectory>
-          <testApplicationControllerFile forControllerName="Index"/>
+          <testApplicationControllerFile forControllerName="Index">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="getScheduleByClassroom"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="User">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="getInfo"/>
+            <testApplicationActionMethod forActionName="login"/>
+            <testApplicationActionMethod forActionName="logout"/>
+            <testApplicationActionMethod forActionName="add"/>
+            <testApplicationActionMethod forActionName="edit"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Students">
+            <testApplicationActionMethod forActionName="index"/>
+          </testApplicationControllerFile>
+          <testApplicationControllerFile forControllerName="Data">
+            <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="getAllClassrooms"/>
+            <testApplicationActionMethod forActionName="getClassroom"/>
+            <testApplicationActionMethod forActionName="editClassroom"/>
+            <testApplicationActionMethod forActionName="deleteClassroom"/>
+            <testApplicationActionMethod forActionName="addClassroom"/>
+            <testApplicationActionMethod forActionName="getScheduleByClassroom"/>
+            <testApplicationActionMethod forActionName="getScheduleByUser"/>
+            <testApplicationActionMethod forActionName="getScheduleByGroup"/>
+          </testApplicationControllerFile>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>
       <testLibraryDirectory/>

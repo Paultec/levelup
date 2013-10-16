@@ -13,6 +13,13 @@ class IndexController extends Zend_Controller_Action
         $this->view->message = '<h3>Welcome to Level Up</h3>';
     }
 
+    public function getScheduleByClassroomAction()
+    {
+        // action body
+    }
+
 
 }
+
+
 

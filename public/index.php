@@ -26,23 +26,23 @@ $application = new Zend_Application(
 $application->bootstrap();
 $router = Zend_Controller_Front::getInstance()->getRouter();
 $router->addRoute(
-        'user-login',
-        new Zend_Controller_Router_Route(
-                '/login/',
-                array(
-                    'controller' => 'user',
-                    'action' => 'login'
-                )
+    'user-login',
+    new Zend_Controller_Router_Route(
+        '/login/',
+        array(
+            'controller' => 'user',
+            'action' => 'login'
         )
+    )
 );
 $router->addRoute(
-        'user-logout',
-        new Zend_Controller_Router_Route(
-                '/logout/',
-                array(
-                    'controller' => 'user',
-                    'action' => 'logout'
-                )
+    'user-logout',
+    new Zend_Controller_Router_Route(
+        '/logout/',
+        array(
+            'controller' => 'user',
+            'action' => 'logout'
         )
+    )
 );
 $application->run();
