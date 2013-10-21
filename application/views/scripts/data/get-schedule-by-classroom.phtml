@@ -1,0 +1,32 @@
+<?php
+    $this->title = 'Просмотр расписания';
+    $this->headTitle($this->title);
+?>
+
+<h3>Вы смотрите расписание по аудитории № <?php echo array_shift($this->scheduleByClassroom);?>: </h3>
+
+<table>
+    <thead>
+    <tr>
+        <th></th><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
+    </tr>
+    <tr>
+        <th>Преподаватель</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+        foreach ($this->scheduleByClassroom as $schedule) {
+            echo '<tr>';
+            echo '<td>'.$schedule['Lecturer'].'</td>';
+            echo '<td>'.$schedule['Mo'].'</td><td>'.$schedule['Tu'].'</td><td>'.$schedule['We'].'</td>';
+            echo '<td>'.$schedule['Th'].'</td><td>'.$schedule['Fr'].'</td><td>'.$schedule['Sa'].'</td><td>'.$schedule['Su'].'</td>';
+            echo '</tr>';
+        }
+    ?>
+    </tbody>
+</table>
+
+<h6>Вернуться к просмотру:</h6>
+<a href="" class="">Link 1</a>
+<a href="" class="">Link 2</a>

@@ -1,0 +1,21 @@
+<?php if (count($this->students)) { ?>
+
+
+    <table>
+        <thead>
+        <tr>
+            <th>StudentsId</th>
+            <th>Имя</th>
+            <th>Фамилия</th>
+            <th>Группа</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php echo $this->PartialLoop('/partials/students-row.phtml', $this->students) ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div>
+        Нет студентов
+    </div>
+<?php } ?>

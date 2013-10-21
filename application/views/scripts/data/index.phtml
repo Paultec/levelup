@@ -1,0 +1,13 @@
+<?php
+    echo $this->message;
+    $this->title = 'Раздел данных';
+    $this->headTitle($this->title);
+?>
+<ul class="">
+    <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-all-classrooms')) ?>">Аудитории</a></li>
+    <li class=""><ul class="">Расписание
+        <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-classrooms')) ?>">по аудиториям</a></li>
+        <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-user')) ?>">по преподавателям</a></li>
+        <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-group')) ?>">по группам</a></li>
+    </ul></li>
+</ul>

@@ -25,6 +25,8 @@ $auth = Zend_Auth::getInstance();
         <li><a href="<?php echo $this->url(array(), 'user-logout') ?>">Выйти</a></li>
         <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'index')) ?>">Смотреть пользователей</a></li>
         <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'add')) ?>">Добавить пользователя</a></li>
+        <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'index')) ?>">Смотреть студентов</a></li>
+        <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'add')) ?>">Добавить студента</a></li>
         <li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'index')) ?>">Перейти к разделу данных</a></li>
     <?php } else { ?>
         <li><a href="<?php echo $this->url(array(), 'user-login') ?>" id="login">Войти</a></li>

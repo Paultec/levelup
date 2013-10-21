@@ -22,6 +22,9 @@
         </controllerFile>
         <controllerFile controllerName="Students">
           <actionMethod actionName="index"/>
+          <actionMethod actionName="getInfo"/>
+          <actionMethod actionName="add"/>
+          <actionMethod actionName="edit"/>
         </controllerFile>
         <controllerFile controllerName="Data">
           <actionMethod actionName="index"/>
@@ -39,6 +42,7 @@
         <formFile formName="Auth"/>
         <formFile formName="AddUser"/>
         <formFile formName="Classroom"/>
+        <formFile formName="Student"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -122,6 +126,15 @@
           <viewControllerScriptsDirectory forControllerName="Data">
             <viewScriptFile forActionName="getScheduleByGroup"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="getInfo"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="add"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="edit"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -170,6 +183,9 @@
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Students">
             <testApplicationActionMethod forActionName="index"/>
+            <testApplicationActionMethod forActionName="getInfo"/>
+            <testApplicationActionMethod forActionName="add"/>
+            <testApplicationActionMethod forActionName="edit"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Data">
             <testApplicationActionMethod forActionName="index"/>

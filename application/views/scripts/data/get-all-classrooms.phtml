@@ -1,0 +1,18 @@
+<li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'add-classroom')) ?>">Добавить аудиторию</a></li>
+<?php if (count($this->classrooms)) { ?>
+    <table>
+        <thead>
+        <tr>
+            <th>Номер</th>
+            <th>Описание</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php echo $this->PartialLoop('/partials/classrooms-row.phtml', $this->classrooms) ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div>
+        Нет аудиторий
+    </div>
+<?php } ?>

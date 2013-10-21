@@ -1,0 +1,34 @@
+<tr>
+    <td><?php echo $this->number ?></td>
+    <td><?php echo $this->description ?></td>
+
+    <td>
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-classroom')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="" type="submit" name="showClassroom" value="Смотреть" />
+            </label>
+        </form>
+
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-classroom')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="" type="submit" name="showSchedule" value="Расписание" />
+            </label>
+        </form>
+
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'edit-classroom')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="" type="submit" name="editClassroom" value="Редактировать" />
+            </label>
+        </form>
+
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-classroom')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="" type="submit" name="deleteClassroom" value="Удалить" />
+            </label>
+        </form>
+    </td>
+</tr>

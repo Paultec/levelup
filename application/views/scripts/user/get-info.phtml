@@ -1,0 +1,19 @@
+<?php
+$this->title = 'Просмотр пользователя';
+$this->headTitle($this->title);
+$user = $this->usersInfo['user'];
+$loginPass = $this->usersInfo['loginPass'];
+$role = $this->usersInfo['role'];
+$status = $this->usersInfo['status'];
+?>
+
+<p>Вы смотрите пользователя: </p>
+'Имя'<h4><?php echo $this->escape($user['firstName']); ?></h4>
+'Фамилия'<h4><?php echo $this->escape($user['lastName']); ?></h4>
+'Роль'<h5><?php echo $this->escape($role['usersRole']); ?></h5>
+'Статус'<h4><?php echo $this->escape($status['status']); ?></h4>
+'Логин'<h4><?php echo $this->escape($loginPass['usersLogin']); ?></h4>
+
+<h6>Вернуться к просмотру:</h6>
+<a href="" class="">Link 1</a>
+<a href="" class="">Link 2</a>
