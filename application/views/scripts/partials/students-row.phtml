@@ -37,5 +37,12 @@
                 <input class="" type="submit" name="deleteUser" value="Удалить" />
             </label>
         </form>
+
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'students', 'action'=>'add-payment')); ?>">
+            <input type="hidden" name="idStudent" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="" type="submit" name="addPayment" value="Внести платеж" />
+            </label>
+        </form>
     </td>
 </tr>
