@@ -8,10 +8,16 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->doctype('HTML5');
         $view->headTitle('LevelUp')->setDefaultAttachOrder(Zend_View_Helper_Placeholder_Container_Abstract::PREPEND);
         $view->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8');
-
-        $view->headScript()->appendFile('/js/myscript.js');
-
-        $view->headLink()->appendStylesheet('/css/mystyle.css');
+        
+        $view->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
+        $view->headScript()->appendFile('/js/scrollbar.js');
+        $view->headScript()->appendFile('/js/script.js');
+        $view->headScript()->appendFile('/js/formstyler.js');
+        
+        $view->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=PT+Sans');        
+        $view->headLink()->appendStylesheet('/css/scrollbar.css');
+        $view->headLink()->appendStylesheet('/css/formstyler.css');
+        $view->headLink()->appendStylesheet('/css/style.css');
 
         return $view;
     }

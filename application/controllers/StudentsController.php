@@ -44,43 +44,8 @@ class StudentsController extends Zend_Controller_Action
         // action body
     }
 
-    public function addPaymentAction()
-    {
-        $form = new Application_Form_Payment();
-        $formData = $form->getValues();
-        if ($this->_request->isPost()){
-            if ($formData['sum'] || $form->isValid($this->_request->getParams())){
-
-
-                $payment = new Application_Model_DbTable_Payments();
-                $payment->addPayment($formData);
-
-                return $this->_forward('index', 'students');
-            } else {
-                $this->view->form = $form;
-            }
-        }
-        $this->view->form = $form;
-    }
-
-    public function editPaymentAction()
-    {
-        // action body
-    }
-
-    public function getPaymentAction()
-    {
-        // action body
-    }
-
 
 }
-
-
-
-
-
-
 
 
 

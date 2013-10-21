@@ -1,0 +1,20 @@
+<?php if (!$this->errorMessage) : ?>
+    <div class="content">
+	<table id="table">
+		<?php foreach($this->results as $row) : ?>
+		<tr>                    
+                    <?php                        
+                        for($i = 0; $i < 26; $i++){
+                            if(!empty($row[$i]))                               
+                                echo '<td>'.$row[$i].'</td>';
+                            else
+                                echo '<td></td>';
+                        }
+                    ?>
+                </tr>
+		<?php endforeach; ?>
+	</table>
+    </div>
+<?php elseif ($this->errorMessage) : ?>
+	<p><?php echo $this->escape($this->errorMessage); ?></p>
+<?php endif; ?>

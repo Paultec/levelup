@@ -13,27 +13,35 @@ $auth = Zend_Auth::getInstance();
     ?>
 </head>
 <body>
-<ul class="">
-    <?php if ($auth->hasIdentity()){ echo 'Вы'; ?>
-        <li>
-            <a href="" title="Мой профиль">
-                <?php echo (!empty($auth->getIdentity()->usersLogin))?
-                    $auth->getIdentity()->usersLogin : $auth->getIdentity()->usersLogin
-                ?>
-            </a>
-        </li>
-        <li><a href="<?php echo $this->url(array(), 'user-logout') ?>">Выйти</a></li>
-        <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'index')) ?>">Смотреть пользователей</a></li>
-        <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'add')) ?>">Добавить пользователя</a></li>
-        <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'index')) ?>">Смотреть студентов</a></li>
-        <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'add')) ?>">Добавить студента</a></li>
-        <li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'index')) ?>">Перейти к разделу данных</a></li>
-    <?php } else { ?>
-        <li><a href="<?php echo $this->url(array(), 'user-login') ?>" id="login">Войти</a></li>
-    <?php } ?>
-</ul>
-<?php
-echo $this->layout()->content;
-?>
+    <div id="head">
+        <ul class="">
+            <div id="personal">
+            <?php if ($auth->hasIdentity()){ echo '<strong>Вы:</strong>'; ?>
+                <li>
+                    <a href="" title="Мой профиль">
+                        <?php echo (!empty($auth->getIdentity()->usersLogin))?
+                            $auth->getIdentity()->usersLogin : $auth->getIdentity()->usersLogin
+                        ?>
+                    </a>
+                </li>
+                <li><a href="<?php echo $this->url(array(), 'user-logout') ?>">Выйти</a></li></div>
+                <div id="controls">
+                    <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'index')) ?>">Смотреть пользователей</a></li>
+                    <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'add')) ?>">Добавить пользователя</a></li>
+                    <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'index')) ?>">Смотреть студентов</a></li>
+                    <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'add')) ?>">Добавить студента</a></li>
+                    <li><a href="<?php echo $this->url(array('controller'=>'pars', 'action'=>'index')) ?>" id="ico">Добавить студентов</a></li>
+                    <li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'index')) ?>">Перейти к разделу данных</a></li>
+            <?php } else { ?>
+                <li><a href="<?php echo $this->url(array(), 'user-login') ?>" id="login">Войти</a></li>
+            <?php } ?>
+        </ul>
+    </div>
+    <div id="content">
+        <?php
+        echo $this->layout()->content;
+        ?>
+    </div>
+    <div id="up"><a href="http://levelup.dp.ua/" target="_blank"></a></div>
 </body>
 </html>
