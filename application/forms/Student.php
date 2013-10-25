@@ -2,6 +2,7 @@
 
 class Application_Form_Student extends Zend_Form
 {
+    const MSG = "Поле обязательно для заполнения!";
 
     public function init()
     {
@@ -41,6 +42,7 @@ class Application_Form_Student extends Zend_Form
             ->setValidators(array('Alnum'))
             ->setAttrib('placeholder', 'Номер договора');
         $this->addElement($numberContract);
+        //$this->_error(self::MSG);
 
         $dateContract = $this->createElement('text', 'dateContract');
         $dateContract->setLabel('Дата заключения договора:')            
@@ -216,7 +218,6 @@ class Application_Form_Student extends Zend_Form
         
         $this->addElement('submit', 'submit', array('label' => 'Сохранить', 'class' => ''));
     }
-
 
 }
 
