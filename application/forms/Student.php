@@ -1,7 +1,6 @@
 <?php
 class Application_Form_Student extends Zend_Form
 {
-
     public function init()
     {
         $id = $this->createElement('hidden', 'id');
