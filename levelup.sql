@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Окт 16 2013 г., 16:48
+-- Время создания: Окт 21 2013 г., 16:51
 -- Версия сервера: 5.6.11
 -- Версия PHP: 5.5.3
 
@@ -207,33 +207,46 @@ INSERT INTO `status` (`id`, `status`) VALUES
 
 CREATE TABLE IF NOT EXISTS `students` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `firstName` varchar(50) NOT NULL,
-  `lastName` varchar(50) NOT NULL,
-  `patronymic` varchar(50) NOT NULL,
-  `birthday` date NOT NULL,
-  `passportSeries` varchar(2) NOT NULL,
-  `passportNumber` varchar(6) NOT NULL,
-  `inn` varchar(14) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `phone` varchar(25) NOT NULL,
-  `phoneFurther` varchar(25) DEFAULT NULL,
-  `email` varchar(50) NOT NULL,
-  `emailFurther` varchar(50) DEFAULT NULL,
+  `timestamp` varchar(15) NOT NULL,
+  `numberContract` varchar(25) NOT NULL,
+  `dateContract` varchar(15) NOT NULL,
+  `lastNameCustomer` varchar(20) NOT NULL,
+  `nameCustomer` varchar(20) NOT NULL,
+  `patronymicCustomer` varchar(20) NOT NULL,
+  `totalSumContractNum` varchar(10) NOT NULL,
+  `totalSumContractA` varchar(100) NOT NULL,
+  `nameCourse` varchar(120) NOT NULL,
+  `durationHours` varchar(5) NOT NULL,
+  `numberMonths` varchar(5) NOT NULL,
+  `passportCustomer` varchar(15) NOT NULL,
+  `INNCustomer` varchar(14) NOT NULL,
+  `addressCustomer` varchar(120) NOT NULL,
+  `telHouseCustomer` varchar(25) NOT NULL,
+  `telMobCustomer` varchar(25) NOT NULL,
+  `emailCustomer` varchar(50) NOT NULL,
+  `lastNameStudent` varchar(50) NOT NULL,
+  `nameStudent` varchar(50) NOT NULL,
+  `patronymicStudent` varchar(50) NOT NULL,
+  `passportStudent` varchar(15) NOT NULL,
+  `INNStudent` varchar(15) NOT NULL,
+  `addressStudent` varchar(255) NOT NULL,
+  `telHouseStudent` varchar(25) NOT NULL,
+  `telMobStudent` varchar(25) NOT NULL,
+  `emailStudent` varchar(50) NOT NULL,
+  `idStatus` int(11) NOT NULL,
+  `idGroup` int(11) DEFAULT '1',
+  `birthday` varchar(15) NOT NULL,
   `skype` varchar(50) NOT NULL,
   `linkVK` varchar(50) DEFAULT NULL,
   `linkFB` varchar(50) DEFAULT NULL,
-  `address` varchar(255) NOT NULL,
-  `idStatus` int(11) NOT NULL,
-  `numberContract` varchar(25) NOT NULL,
-  `idGroup` int(11) DEFAULT '1',
-  `sumContract` smallint(6) NOT NULL,
+  `photo` varchar(255) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `status` (`idStatus`),
   KEY `status_2` (`idStatus`),
   KEY `idGroup` (`idGroup`),
   KEY `idGroup_2` (`idGroup`),
   KEY `idGroup_3` (`idGroup`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 

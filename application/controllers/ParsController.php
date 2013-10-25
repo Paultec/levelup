@@ -14,19 +14,24 @@ class ParsController extends Zend_Controller_Action
 
         if($this->getRequest()->isPost()){
             if($form->isValid($request->getPost())){
-    		$result_array = $form->parseData($_FILES["csv"]["tmp_name"]);
+    		$result = $form->parseData($_FILES["csv"]["tmp_name"]);
 
-    		if($result_array){
-                $this->view->results = $result_array;
+    		if($result){                    
+                    // Для вставки в базу
+                    $student = new Application_Model_DbTable_Students();
+                    for($i = 0, $count = count($result[0]); $i < $count; $i++){
+                        $student->addStudent($result[0][$i]);
+                    }
+                    // Для вывода таблицы
+                    $this->view->results = $result[1];
     		}
     		else{
-                $this->view->errorMessage = "Ошибка! Нечего показывать.";
+                    $this->view->errorMessage = "Ошибка! Нечего показывать.";
     		}
-    		$this->render('result');
+                $this->render('result');
     		return;
             }
         }
     $this->view->form = $form;
-    }
-
+    }        
 }

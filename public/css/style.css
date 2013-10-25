@@ -30,8 +30,9 @@ strong{
 	right: 0;
 }
 
-#controls a{
+#controls a:link, #controls a:visited{
 	text-decoration: none;
+	color: #005D99;
 }
 
 #controls a:hover{
@@ -111,13 +112,13 @@ select{
 }
 
 input[type='text'], input[type='password']{
-	width: 150px;		
+	width: 330px;		
 	-webkit-transition:width 500ms;
 	transition:width 500ms;
 }
 
 input[type='text']:hover, input[type='password']:hover{
-	width: 180px;	
+	width: 340px;	
 }
 
 form{

@@ -3,14 +3,14 @@
 	<table id="table">
 		<?php foreach($this->results as $row) : ?>
 		<tr>                    
-                    <?php                        
+                    <?php                      
                         for($i = 0; $i < 26; $i++){
-                            if(!empty($row[$i]))                               
+                            if(!empty($row[$i]))                                
                                 echo '<td>'.$row[$i].'</td>';
                             else
                                 echo '<td></td>';
                         }
-                    ?>
+                    ?>                    
                 </tr>
 		<?php endforeach; ?>
 	</table>
