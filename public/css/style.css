@@ -47,6 +47,10 @@ strong{
 	color: green;
 }
 
+.errors, .errors > li{
+	color: red;
+}
+
 #up{
 	width: 78px;
 	height: 120px;

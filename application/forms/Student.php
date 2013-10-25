@@ -37,36 +37,40 @@ class Application_Form_Student extends Zend_Form
 
         $numberContract = $this->createElement('text', 'numberContract');
         $numberContract->setLabel('Номер договора:')
+            ->setRequired()
             ->setValidators(array('Alnum'))
             ->setAttrib('placeholder', 'Номер договора');
         $this->addElement($numberContract);
 
         $dateContract = $this->createElement('text', 'dateContract');
-        $dateContract->setLabel('Дата заключения договора:')
+        $dateContract->setLabel('Дата заключения договора:')            
             ->setAttrib('class', 'date')
             ->setAttrib('placeholder', 'Дата заключения договора');
         $this->addElement($dateContract);
 
         $lastNameCustomer = $this->createElement('text', 'lastNameCustomer');
         $lastNameCustomer->setLabel('Фамилия Заказчика обучения:')
+            ->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Фамилия Заказчика обучения');
         $this->addElement($lastNameCustomer);
 
         $nameCustomer = $this->createElement('text', 'nameCustomer');
         $nameCustomer->setLabel('Имя Заказчика обучения:')
+            ->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Имя Заказчика обучения');
         $this->addElement($nameCustomer);
 
         $patronymicCustomer = $this->createElement('text', 'patronymicCustomer');
         $patronymicCustomer->setLabel('Отчество Заказчика обучения:')
+            ->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Отчество Заказчика обучения');
         $this->addElement($patronymicCustomer);
 
         $totalSumContractNum = $this->createElement('text', 'totalSumContractNum');
-        $totalSumContractNum->setLabel('Общая сумма договора цифрами:')
+        $totalSumContractNum->setLabel('Общая сумма договора цифрами:')            
             ->setValidators(array('Digits'))
             ->setAttrib('placeholder', 'Общая сумма договора цифрами');
         $this->addElement($totalSumContractNum);
