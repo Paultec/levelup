@@ -1,0 +1,18 @@
+<ul><li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'add-subject')) ?>">Добавить предмет</a></li></ul>
+<?php if (count($this->subjects)) { ?>
+    <table>
+        <thead>
+        <tr>
+            <th>Название</th>
+            <th>Продолжительность в часах</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php echo $this->PartialLoop('/partials/subjects-row.phtml', $this->subjects) ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div>
+        Нет предметов
+    </div>
+<?php } ?>

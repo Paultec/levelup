@@ -39,6 +39,26 @@
           <actionMethod actionName="getScheduleByClassroom"/>
           <actionMethod actionName="getScheduleByUser"/>
           <actionMethod actionName="getScheduleByGroup"/>
+          <actionMethod actionName="addSubject"/>
+          <actionMethod actionName="editSubject"/>
+          <actionMethod actionName="getSubject"/>
+          <actionMethod actionName="deleteSubject"/>
+          <actionMethod actionName="addSpecialisation"/>
+          <actionMethod actionName="editSpecialisation"/>
+          <actionMethod actionName="getSpecialisation"/>
+          <actionMethod actionName="getAllSpecialisations"/>
+          <actionMethod actionName="deleteSpecialisation"/>
+          <actionMethod actionName="getAllSubjects"/>
+          <actionMethod actionName="addGroup"/>
+          <actionMethod actionName="editGroup"/>
+          <actionMethod actionName="getGroup"/>
+          <actionMethod actionName="getAllGroups"/>
+          <actionMethod actionName="deleteGroup"/>
+          <actionMethod actionName="addStatus"/>
+          <actionMethod actionName="editStatus"/>
+          <actionMethod actionName="getStatus"/>
+          <actionMethod actionName="getAllStatuses"/>
+          <actionMethod actionName="deleteStatus"/>
         </controllerFile>
       </controllersDirectory>
       <formsDirectory>
@@ -46,6 +66,10 @@
         <formFile formName="AddUser"/>
         <formFile formName="Classroom"/>
         <formFile formName="Student"/>
+        <formFile formName="Subject"/>
+        <formFile formName="Specialisation"/>
+        <formFile formName="Group"/>
+        <formFile formName="Status"/>
       </formsDirectory>
       <layoutsDirectory>
         <layoutScriptsDirectory>
@@ -147,6 +171,57 @@
           <viewControllerScriptsDirectory forControllerName="Students">
             <viewScriptFile forActionName="getPayment"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="addSubject"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="editSubject"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="deleteSubject"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getSpecialisation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getAllSpecialisations"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="deleteSpecialisation"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getAllSubjects"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="addGroup"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="editGroup"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getGroup"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getAllGroups"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="deleteGroup"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="addStatus"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="editStatus"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getStatus"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="getAllStatuses"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Data">
+            <viewScriptFile forActionName="deleteStatus"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -212,6 +287,26 @@
             <testApplicationActionMethod forActionName="getScheduleByClassroom"/>
             <testApplicationActionMethod forActionName="getScheduleByUser"/>
             <testApplicationActionMethod forActionName="getScheduleByGroup"/>
+            <testApplicationActionMethod forActionName="addSubject"/>
+            <testApplicationActionMethod forActionName="editSubject"/>
+            <testApplicationActionMethod forActionName="getSubject"/>
+            <testApplicationActionMethod forActionName="deleteSubject"/>
+            <testApplicationActionMethod forActionName="addSpecialisation"/>
+            <testApplicationActionMethod forActionName="editSpecialisation"/>
+            <testApplicationActionMethod forActionName="getSpecialisation"/>
+            <testApplicationActionMethod forActionName="getAllSpecialisations"/>
+            <testApplicationActionMethod forActionName="deleteSpecialisation"/>
+            <testApplicationActionMethod forActionName="getAllSubjects"/>
+            <testApplicationActionMethod forActionName="addGroup"/>
+            <testApplicationActionMethod forActionName="editGroup"/>
+            <testApplicationActionMethod forActionName="getGroup"/>
+            <testApplicationActionMethod forActionName="getAllGroups"/>
+            <testApplicationActionMethod forActionName="deleteGroup"/>
+            <testApplicationActionMethod forActionName="addStatus"/>
+            <testApplicationActionMethod forActionName="editStatus"/>
+            <testApplicationActionMethod forActionName="getStatus"/>
+            <testApplicationActionMethod forActionName="getAllStatuses"/>
+            <testApplicationActionMethod forActionName="deleteStatus"/>
           </testApplicationControllerFile>
         </testApplicationControllerDirectory>
       </testApplicationDirectory>

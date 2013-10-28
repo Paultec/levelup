@@ -5,6 +5,10 @@
 ?>
 <ul class="">
     <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-all-classrooms')) ?>">Аудитории</a></li>
+    <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-all-groups')) ?>">Группы</a></li>
+    <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-all-subjects')) ?>">Предметы</a></li>
+    <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-all-specialisations')) ?>">Специальности</a></li>
+    <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-all-statuses')) ?>">Статусы</a></li>
     <li class=""><ul class="">Расписание
         <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-classrooms')) ?>">по аудиториям</a></li>
         <li class=""><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-user')) ?>">по преподавателям</a></li>

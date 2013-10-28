@@ -133,8 +133,238 @@ class DataController extends Zend_Controller_Action
         // action body
     }
 
+    public function addSubjectAction()
+    {
+        $form = new Application_Form_Subject();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $subject = new Application_Model_DbTable_Subjects();
+                $subject->addSubject($formData);
+                return $this->_forward('get-all-subjects', 'data');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function editSubjectAction()
+    {
+        $form = new Application_Form_Subject();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $id = $this->_getParam('id');
+                $subject = new Application_Model_DbTable_Subjects();
+                $subject->editSubject($id, $formData);
+                return $this->_forward('get-all-subjects', 'data');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $subject = new Application_Model_DbTable_Subjects();
+                    $form->populate($subject->getSubject($id));
+                }
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function getSubjectAction()
+    {
+        $id = $this->_getParam('id');
+        $subject = new Application_Model_DbTable_Subjects();
+        $this->view->classroom = $subject->getSubject($id);
+    }
+
+    public function getAllSubjectsAction()
+    {
+        $subject = new Application_Model_DbTable_Subjects();
+        $this->view->subjects = $subject->getAllSubjects();
+    }
+
+    public function deleteSubjectAction()
+    {
+        // action body
+    }
+
+    public function addSpecialisationAction()
+    {
+        $form = new Application_Form_Specialisation();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $specialisation = new Application_Model_DbTable_Specialisation();
+                $specialisation->addSpecialisation($formData);
+                return $this->_forward('get-all-specialisations', 'data');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function editSpecialisationAction()
+    {
+        $form = new Application_Form_Specialisation();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $id = $this->_getParam('id');
+                $specialisation = new Application_Model_DbTable_Specialisation();
+                $specialisation->editSpecialisation($id, $formData);
+                return $this->_forward('get-all-specialisations', 'data');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $specialisation = new Application_Model_DbTable_Specialisation();
+                    $form->populate($specialisation->getSpecialisation($id));
+                }
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function getSpecialisationAction()
+    {
+        $id = $this->_getParam('id');
+        $specialisation = new Application_Model_DbTable_Specialisation();
+        $this->view->specialisation = $specialisation->getSpecialisation($id);
+    }
+
+    public function getAllSpecialisationsAction()
+    {
+        $specialisation = new Application_Model_DbTable_Specialisation();
+        $this->view->specialisations = $specialisation->getAllSpecialisations();
+    }
+
+    public function deleteSpecialisationAction()
+    {
+        // action body
+    }
+
+    public function addGroupAction()
+    {
+        // action body
+    }
+
+    public function editGroupAction()
+    {
+        // action body
+    }
+
+    public function getGroupAction()
+    {
+        // action body
+    }
+
+    public function getAllGroupsAction()
+    {
+        // action body
+    }
+
+    public function deleteGroupAction()
+    {
+        // action body
+    }
+
+    public function addStatusAction()
+    {
+        $form = new Application_Form_Status();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $status = new Application_Model_DbTable_Status();
+                $status->addStatus($formData);
+                return $this->_forward('get-all-statuses', 'data');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function editStatusAction()
+    {
+        $form = new Application_Form_Status();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $id = $this->_getParam('id');
+                $status = new Application_Model_DbTable_Status();
+                $status->editStatus($id, $formData);
+                return $this->_forward('get-all-statuses', 'data');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $status = new Application_Model_DbTable_Status();
+                    $form->populate($status->getStatus($id));
+                }
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function getStatusAction()
+    {
+        $id = $this->_getParam('id');
+        $status= new Application_Model_DbTable_Status();
+        $this->view->status = $status->getStatus($id);
+    }
+
+    public function getAllStatusesAction()
+    {
+        $status = new Application_Model_DbTable_Status();
+        $this->view->statuses = $status->getAllStatuses();
+    }
+
+    public function deleteStatusAction()
+    {
+        // action body
+    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
