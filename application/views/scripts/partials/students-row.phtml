@@ -13,35 +13,40 @@
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'user', 'action'=>'get-info')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="showUser" value="Смотреть" />
+                <input class="hidden" type="submit" name="showUser" value="Смотреть" />
+                <i class="look" title="Смотреть"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-user')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="showSchedule" value="Расписание" />
+                <input class="hidden" type="submit" name="showSchedule" value="Расписание" />
+                <i class="schedule" title="Расписание"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'user', 'action'=>'edit')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="editUser" value="Редактировать" />
+                <input class="hidden" type="submit" name="editUser" value="Редактировать" />
+                <i class="edit" title="Редактировать"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'user', 'action'=>'delete')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="deleteUser" value="Удалить" />
+                <input class="hidden" type="submit" name="deleteUser" value="Удалить" />
+                <i class="cut" title="Удалить"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'students', 'action'=>'add-payment')); ?>">
             <input type="hidden" name="idStudent" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="addPayment" value="Внести платеж" />
+                <input class="hidden" type="submit" name="addPayment" value="Внести платеж" />
+                <i class="payment" title="Внести платеж"></i>
             </label>
         </form>
     </td>

@@ -1,7 +1,7 @@
 $(function(){
 	// Прокрутка таблицы
 	$('#table tr:first').addClass('tableHead');
-	$('#table tr:odd').css('background-color', '#fff5ee');
+	$('#table tr:odd').css('background-color', '#A1BBDB');
 	
 	$('#table tr').on('click', function(){
 		$(this).toggleClass('mark');
@@ -43,4 +43,8 @@ $(function(){
 		showMonthAfterYear: false,
 		yearSuffix: ''};
 	$.datepicker.setDefaults($.datepicker.regional['ru']);
+	
+	
+	// Всплывающие подсказки
+	$('i').tipsy();
 });

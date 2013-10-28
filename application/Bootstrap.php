@@ -10,16 +10,18 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headMeta()->appendHttpEquiv('Content-Type', 'text/html; charset=UTF-8');
         
         $view->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
-        $view->headScript()->appendFile('http://code.jquery.com/ui/1.10.3/jquery-ui.js');
+        $view->headScript()->appendFile('http://code.jquery.com/ui/1.10.3/jquery-ui.js');        
         $view->headScript()->appendFile('/js/scrollbar.js');
+        $view->headScript()->appendFile('/js/tipsy.js');
         $view->headScript()->appendFile('/js/script.js');
-        $view->headScript()->appendFile('/js/formstyler.js');
+        $view->headScript()->appendFile('/js/formstyler.js');        
         
-        $view->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=PT+Sans');
+        $view->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=PT+Sans');        
         $view->headLink()->appendStylesheet('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
         $view->headLink()->appendStylesheet('/css/scrollbar.css');
+        $view->headLink()->appendStylesheet('/css/tipsy.css');
         $view->headLink()->appendStylesheet('/css/formstyler.css');
-        $view->headLink()->appendStylesheet('/css/style.css');
+        $view->headLink()->appendStylesheet('/css/style.css');        
 
         return $view;
     }

@@ -1,7 +1,7 @@
 @import url('reset.css');
 
 body{
-	font: 16px 'PT Sans', Verdana, Arial, sans-serif;	
+	font: 16px 'PT Sans', Verdana, Arial, sans-serif;
 }
 
 strong{
@@ -36,6 +36,15 @@ strong{
 }
 
 #controls a:hover{
+	text-decoration: underline;
+}
+
+#personal a:link, #personal a:visited{
+	text-decoration: none;
+	color: #000000;
+}
+
+#personal a:hover{
 	text-decoration: underline;
 }
 
@@ -129,3 +138,37 @@ form{
 	float: left;
 	margin: 5px;
 }
+
+/*Кнопки-картинки*/
+.look, .schedule, .edit, .cut, .payment{
+	width: 32px;
+	height: 32px;
+	display: block;
+	cursor: pointer;
+}
+
+.look{
+	background: url('/img/buttons/look.png');
+}
+
+.schedule{
+	background: url('/img/buttons/schedule.png');
+}
+
+.edit{
+	background: url('/img/buttons/edit.png');
+}
+
+.cut{
+	background: url('/img/buttons/cut.png');
+}
+
+.payment{
+	background: url('/img/buttons/payment.png');
+}
+
+.hidden{
+	display: none;
+}
+
+/*Всплывающие подсказки*/
