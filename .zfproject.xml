@@ -25,6 +25,9 @@
           <actionMethod actionName="getInfo"/>
           <actionMethod actionName="add"/>
           <actionMethod actionName="edit"/>
+          <actionMethod actionName="addPayment"/>
+          <actionMethod actionName="editPayment"/>
+          <actionMethod actionName="getPayment"/>
         </controllerFile>
         <controllerFile controllerName="Data">
           <actionMethod actionName="index"/>
@@ -135,6 +138,15 @@
           <viewControllerScriptsDirectory forControllerName="Students">
             <viewScriptFile forActionName="edit"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="addPayment"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="editPayment"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="getPayment"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -186,6 +198,9 @@
             <testApplicationActionMethod forActionName="getInfo"/>
             <testApplicationActionMethod forActionName="add"/>
             <testApplicationActionMethod forActionName="edit"/>
+            <testApplicationActionMethod forActionName="addPayment"/>
+            <testApplicationActionMethod forActionName="editPayment"/>
+            <testApplicationActionMethod forActionName="getPayment"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Data">
             <testApplicationActionMethod forActionName="index"/>

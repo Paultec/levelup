@@ -44,8 +44,53 @@ class StudentsController extends Zend_Controller_Action
         // action body
     }
 
+    /*Разобраться, почему в методе не срабатывает $formData = $form->getValues();
+    Из-за этого пришлось получать значения из формы явным путем и присваивать в массив $formData*/
+    public function addPaymentAction()
+    {
+        $form = new Application_Form_Payment();
+        $formData = $form->getValues();
+        if ($this->getParam('idStudent')) {
+            $idStudent = $this->getParam('idStudent');
+            $form->idStudent->setValue($idStudent);
+        }
+//        начало костыля
+        $date = $this->getParam('date');
+        $sum = $this->getParam('sum');
+        $formData['date'] = $date;
+        $formData['sum'] = $sum;
+        $formData['idStudent'] = $idStudent;
+//        конец костыля
+
+        if ($formData['date'] && $formData['sum'] && $form->isValid($this->_request->getParams())){
+            $payment = new Application_Model_DbTable_Payments();
+            $payment->addPayment($formData);
+
+            return $this->_forward('index', 'students');
+        } else {
+            $this->view->form = $form;
+        }
+
+    }
+
+    public function editPaymentAction()
+    {
+        // action body
+    }
+
+    public function getPaymentAction()
+    {
+        // action body
+    }
+
 
 }
+
+
+
+
+
+
 
 
 
