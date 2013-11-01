@@ -12,9 +12,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headScript()->appendFile('http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js');
         $view->headScript()->appendFile('http://code.jquery.com/ui/1.10.3/jquery-ui.js');        
         $view->headScript()->appendFile('/js/scrollbar.js');
-        $view->headScript()->appendFile('/js/tipsy.js');
+        $view->headScript()->appendFile('/js/tipsy.js');        
+        $view->headScript()->appendFile('/js/formstyler.js');
+        $view->headScript()->appendFile('/js/tabsort.js');
         $view->headScript()->appendFile('/js/script.js');
-        $view->headScript()->appendFile('/js/formstyler.js');        
+        
         
         $view->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=PT+Sans');        
         $view->headLink()->appendStylesheet('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
