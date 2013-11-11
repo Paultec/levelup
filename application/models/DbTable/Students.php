@@ -22,7 +22,8 @@ class Application_Model_DbTable_Students extends Zend_Db_Table_Abstract
     }
 
     public function addStudent($data)
-    {
+    {        
+        //$data['photo'] = base64_encode($data['photo']);
         return $this->insert($data);
     }
 

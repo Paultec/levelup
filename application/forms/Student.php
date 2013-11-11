@@ -4,7 +4,7 @@ class Application_Form_Student extends Zend_Form
     public function init()
     {
         $id = $this->createElement('hidden', 'id');
-        $this->addElement($id);
+        $this->addElement($id);        
 
         $status = $this->createElement('select', 'idStatus');
         $status->setLabel('Выберите статус студента:')
@@ -35,7 +35,7 @@ class Application_Form_Student extends Zend_Form
 
         $numberContract = $this->createElement('text', 'numberContract');
         $numberContract->setLabel('Номер договора:')
-            ->setRequired()
+            //->setRequired()
             ->setValidators(array('Alnum'))
             ->setAttrib('placeholder', 'Номер договора');
         $this->addElement($numberContract);        
@@ -48,21 +48,21 @@ class Application_Form_Student extends Zend_Form
 
         $lastNameCustomer = $this->createElement('text', 'lastNameCustomer');
         $lastNameCustomer->setLabel('Фамилия Заказчика обучения:')
-            ->setRequired()
+            //->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Фамилия Заказчика обучения');
         $this->addElement($lastNameCustomer);
 
         $nameCustomer = $this->createElement('text', 'nameCustomer');
         $nameCustomer->setLabel('Имя Заказчика обучения:')
-            ->setRequired()
+            //->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Имя Заказчика обучения');
         $this->addElement($nameCustomer);
 
         $patronymicCustomer = $this->createElement('text', 'patronymicCustomer');
         $patronymicCustomer->setLabel('Отчество Заказчика обучения:')
-            ->setRequired()
+            //->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Отчество Заказчика обучения');
         $this->addElement($patronymicCustomer);
@@ -205,11 +205,15 @@ class Application_Form_Student extends Zend_Form
         $linkFB = $this->createElement('text', 'linkFB');
         $linkFB->setLabel('Facebook:')
             ->setAttrib('placeholder', 'Введите');
-        $this->addElement($linkFB);
-        // Zend_Mime::encodeBase64()
-        $photo = $this->createElement('text', 'photo');
+        $this->addElement($linkFB);        
+        
+        $photo = $this->createElement('file', 'photo');
         $photo->setLabel('Фото:')
-            ->setAttrib('placeholder', 'Фото');
+              ->addValidator('Size', false, 1024000)
+              ->addValidator('Extension', false, 'jpg,png,gif')
+              ->setDestination('c:/xampp/htdocs/levelup/public/img/photos')
+              ->addFilter('Rename', $numberContract.'.jpg') // Ошибка!!!
+              /*->setDestination('/levelup/public/img/photos')*/;
         $this->addElement($photo);
         
         $this->addElement('submit', 'submit', array('label' => 'Сохранить', 'class' => ''));

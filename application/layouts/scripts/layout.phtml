@@ -13,7 +13,16 @@ $auth = Zend_Auth::getInstance();
     ?>
 </head>
 <body>
-    <div id="head">
+    <div id="logo">
+        <h1 id="l">L</h1>
+        <h1 id="e">e</h1>
+        <h1 id="v">v</h1>
+        <h1 id="ee">e</h1>
+        <h1 id="ll">l</h1>
+        <h1 class="big">U</h1>
+        <h1 class="big">P</h1>         
+    </div>
+    <div id="head">        
         <ul class="">
             <div id="personal">
             <?php if ($auth->hasIdentity()){ echo '<strong>Вы:</strong>'; ?>
@@ -43,6 +52,6 @@ $auth = Zend_Auth::getInstance();
         echo $this->layout()->content;
         ?>
     </div>
-    <div id="up"><a href="http://levelup.dp.ua/" target="_blank"></a></div>
+    <div id="up"><a href="http://levelup.dp.ua/" target="_blank" title="На LevelUP"></a></div>
 </body>
 </html>
