@@ -6,28 +6,32 @@
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-classroom')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="showClassroom" value="Смотреть" />
+                <input class="hidden" type="submit" name="showClassroom" value="Смотреть" />
+                <i class="look" title="Смотреть"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'get-schedule-by-classroom')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="showSchedule" value="Расписание" />
+                <input class="hidden" type="submit" name="showSchedule" value="Расписание" />
+                <i class="schedule" title="Расписание"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'edit-classroom')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="editClassroom" value="Редактировать" />
+                <input class="hidden" type="submit" name="editClassroom" value="Редактировать" />
+                <i class="edit" title="Редактировать"></i>
             </label>
         </form>
 
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-classroom')); ?>">
             <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
             <label>
-                <input class="" type="submit" name="deleteClassroom" value="Удалить" />
+                <input class="hidden" type="submit" name="deleteClassroom" value="Удалить" />
+                <i class="cut" title="Удалить"></i>
             </label>
         </form>
     </td>

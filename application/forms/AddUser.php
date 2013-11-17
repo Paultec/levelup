@@ -39,35 +39,29 @@ class Application_Form_AddUser extends Zend_Form
             ->setAttrib('placeholder', 'Введите имя');
         $this->addElement($firstName);
 
+        $lastName = $this->createElement('text', 'lastName');
+        $lastName->setLabel('Фамилия:')
+            ->setValidators(array('Alpha'))
+            ->setAttrib('placeholder', 'Введите фамилию');
+        $this->addElement($lastName);
+        
         $patronymic = $this->createElement('text', 'patronymic');
         $patronymic->setLabel('Отчество:')
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Введите отчество');
         $this->addElement($patronymic);
 
-        $lastName = $this->createElement('text', 'lastName');
-        $lastName->setLabel('Фамилия:')
-            ->setValidators(array('Alpha'))
-            ->setAttrib('placeholder', 'Введите фамилию');
-        $this->addElement($lastName);
-
         $birthday = $this->createElement('text', 'birthday');
         $birthday->setLabel('Дата рождения:')
-            ->setValidators(array('Date'))
-            ->setAttrib('placeholder', 'YYYY-MM-DD');
+            ->setAttrib('class', 'date')            
+            ->setAttrib('placeholder', 'Дата рождения');
         $this->addElement($birthday);
+        
 
-        $passportSeries = $this->createElement('text', 'passportSeries');
-        $passportSeries->setLabel('Серия паспорта:')
-            ->setValidators(array('Alpha'))
-            ->setAttrib('placeholder', 'Введите 2 буквы серии');
-        $this->addElement($passportSeries);
-
-        $passportNumber = $this->createElement('text', 'passportNumber');
-        $passportNumber->setLabel('Номер паспорта:')
-            ->setValidators(array('Digits'))
-            ->setAttrib('placeholder', 'Введите номер');
-        $this->addElement($passportNumber);
+        $passport = $this->createElement('text', 'passportNumber');
+        $passport->setLabel('Паспорт, серия/номер:')            
+            ->setAttrib('placeholder', 'Паспорт, серия/номер');
+        $this->addElement($passport);
 
         $inn = $this->createElement('text', 'inn');
         $inn->setLabel('ИНН:')
