@@ -19,7 +19,7 @@ class Application_Form_AddUser extends Zend_Form
         $login = $this->createElement('text', 'usersLogin');
         $login->setLabel('Логин для этого пользователся:')
             ->setAttrib('placeholder', 'Введите логин')
-            ->setRequired();;
+            ->setRequired();
         $this->addElement($login);
 
         $password = $this->createElement('text', 'usersPassword');
