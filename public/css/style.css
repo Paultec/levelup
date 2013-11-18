@@ -1,7 +1,8 @@
 @import url('reset.css');
 
 body{
-	font: 16px 'PT Sans', Verdana, Arial, sans-serif;	
+	font: 16px 'PT Sans', Verdana, Arial, sans-serif;
+	min-width: 800px;
 }
 
 strong{
@@ -10,7 +11,7 @@ strong{
 
 #head{
 	width: 900px;
-	height: 125px;
+	height: 135px;
 	margin: 0 auto;
 	position: relative;
 	margin-top: 10px;
@@ -211,16 +212,27 @@ form{
 	top: 0;
 	left: 0;
 	padding: 15px;
+	-webkit-transform: rotate(-25deg);
+	-moz-transform: rotate(-25deg);
+	-o-transform: rotate(-25deg);
+	-ms-transform: rotate(-25deg);
+	transform: rotate(-25deg);
 }
 
 #logo h1{
 	font: 30px 'Flavors', cursive;
 	display: inline-block;
-	color: #00629A;
+	color: #00629A;	
 }
 
 #logo h1.big{
 	font-size: 46px;
+}
+
+@media all and (max-width: 1200px){
+	#logo{
+		display: none;
+	}
 }
 
 .animated {
@@ -796,4 +808,8 @@ form{
 		opacity: 0;
 		transform: translateY(-2000px);
 	}
+}
+
+#ui-datepicker-div{
+	font-size: .9em;
 }

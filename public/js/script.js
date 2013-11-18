@@ -72,5 +72,5 @@ $(function(){
 			});
 		});
 	}	
-	setInterval(doMagicOut, 30000);
+	setInterval(doMagicOut, 30000);	
 });

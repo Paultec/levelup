@@ -16,12 +16,11 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $view->headScript()->appendFile('/js/formstyler.js');
         $view->headScript()->appendFile('/js/tabsort.js');
         $view->headScript()->appendFile('/js/script.js');
-        $view->headScript()->appendFile('/js/animo.js');
-        
+        $view->headScript()->appendFile('/js/animo.js');        
         
         $view->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=PT+Sans');
         $view->headLink()->appendStylesheet('http://fonts.googleapis.com/css?family=Flavors');
-        $view->headLink()->appendStylesheet('http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css');
+        $view->headLink()->appendStylesheet('http://code.jquery.com/ui/1.10.3/themes/cupertino/jquery-ui.css');
         $view->headLink()->appendStylesheet('/css/scrollbar.css');
         $view->headLink()->appendStylesheet('/css/tipsy.css');
         $view->headLink()->appendStylesheet('/css/formstyler.css');

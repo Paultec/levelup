@@ -34,21 +34,7 @@ class StudentsController extends Zend_Controller_Action
         $form = new Application_Form_Student();
         if ($this->_request->isPost()){
             if ($form->isValid($this->_request->getParams())){
-                $formData = $form->getValues();
-                
-                /*if ($form->photo->isUploaded()){
-                    $fileinfo = $form->photo->getFileInfo();                    
-                    $filename = $fileinfo['photo']['name'];
-                    echo '<pre>';
-                    print_r($form->photo->getFileInfo());
-                    echo '</pre>';                    
-                    $extn = pathinfo($filename,PATHINFO_EXTENSION);                    
-                    $uploadname = $this->_makeFilename($formData, $extn);                 
-                    $uploadfilepath = self::UPLOADED_FILES_PATH . '/' . $uploadname;
-                    echo '<br><br>'.$uploadfilepath;
-                    $form->photo->addFilter('Rename', $uploadfilepath);
-                    $receiveStatus = $form->photo->receive();              
-                }*/
+                $formData = $form->getValues();                
 
                 $student = new Application_Model_DbTable_Students();
                 $student->addStudent($formData);
