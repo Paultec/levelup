@@ -35,7 +35,7 @@ class Application_Form_Student extends Zend_Form
 
         $numberContract = $this->createElement('text', 'numberContract');
         $numberContract->setLabel('Номер договора:')
-            //->setRequired()
+            ->setRequired()
             ->setValidators(array('Alnum'))
             ->setAttrib('placeholder', 'Номер договора');
         $this->addElement($numberContract);        
@@ -48,21 +48,21 @@ class Application_Form_Student extends Zend_Form
 
         $lastNameCustomer = $this->createElement('text', 'lastNameCustomer');
         $lastNameCustomer->setLabel('Фамилия Заказчика обучения:')
-            //->setRequired()
+            ->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Фамилия Заказчика обучения');
         $this->addElement($lastNameCustomer);
 
         $nameCustomer = $this->createElement('text', 'nameCustomer');
         $nameCustomer->setLabel('Имя Заказчика обучения:')
-            //->setRequired()
+            ->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Имя Заказчика обучения');
         $this->addElement($nameCustomer);
 
         $patronymicCustomer = $this->createElement('text', 'patronymicCustomer');
         $patronymicCustomer->setLabel('Отчество Заказчика обучения:')
-            //->setRequired()
+            ->setRequired()
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Отчество Заказчика обучения');
         $this->addElement($patronymicCustomer);
@@ -211,7 +211,7 @@ class Application_Form_Student extends Zend_Form
         $photo->setLabel('Фото:')
               ->addValidator('Size', false, 1024000)
               ->addValidator('Extension', false, 'jpg,png,gif')
-              ->setDestination('c:/xampp/htdocs/levelup/public/img/photos') // Абсолютный путь
+              ->setDestination('c:/xampp/htdocs/levelup/public/img/photos/students') // Абсолютный путь
               ->addFilter('Rename', substr(md5(microtime()), 0, 10).'.jpg');
         $this->addElement($photo);
         
