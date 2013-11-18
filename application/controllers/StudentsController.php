@@ -2,12 +2,22 @@
 
 class StudentsController extends Zend_Controller_Action
 {
+    const UPLOADED_FILES_PATH = 'c:/xampp/htdocs/levelup/public/img/photos';
 
     public function init()
     {
         /* Initialize action controller here */
     }
 
+    
+    protected function _makeFilename($name, $thumbnail = false)
+    {   if ($thumbnail) {
+            return $name . '.thumb.jpg';
+        }
+        return $name . '.jpg';
+    }
+
+    
     public function indexAction()
     {
         $students = new Application_Model_DbTable_Students();
@@ -24,7 +34,7 @@ class StudentsController extends Zend_Controller_Action
         $form = new Application_Form_Student();
         if ($this->_request->isPost()){
             if ($form->isValid($this->_request->getParams())){
-                $formData = $form->getValues();
+                $formData = $form->getValues();                
 
                 $student = new Application_Model_DbTable_Students();
                 $student->addStudent($formData);

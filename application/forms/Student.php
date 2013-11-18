@@ -4,7 +4,7 @@ class Application_Form_Student extends Zend_Form
     public function init()
     {
         $id = $this->createElement('hidden', 'id');
-        $this->addElement($id);
+        $this->addElement($id);        
 
         $status = $this->createElement('select', 'idStatus');
         $status->setLabel('Выберите статус студента:')
@@ -205,11 +205,14 @@ class Application_Form_Student extends Zend_Form
         $linkFB = $this->createElement('text', 'linkFB');
         $linkFB->setLabel('Facebook:')
             ->setAttrib('placeholder', 'Введите');
-        $this->addElement($linkFB);
-        // Zend_Mime::encodeBase64()
-        $photo = $this->createElement('text', 'photo');
+        $this->addElement($linkFB);        
+        
+        $photo = $this->createElement('file', 'photo');
         $photo->setLabel('Фото:')
-            ->setAttrib('placeholder', 'Фото');
+              ->addValidator('Size', false, 1024000)
+              ->addValidator('Extension', false, 'jpg,png,gif')
+              ->setDestination('c:/xampp/htdocs/levelup/public/img/photos/students') // Абсолютный путь
+              ->addFilter('Rename', substr(md5(microtime()), 0, 10).'.jpg');
         $this->addElement($photo);
         
         $this->addElement('submit', 'submit', array('label' => 'Сохранить', 'class' => ''));

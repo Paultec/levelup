@@ -13,12 +13,14 @@ class Application_Form_Payment extends Zend_Form
 
         $date = $this->createElement('text', 'date');
         $date->setLabel('Дата платежа:')
-            ->setValidators(array('Date'))
-            ->setAttrib('placeholder', 'YYYY-MM-DD');
+            ->setRequired()
+            ->setAttrib('class', 'date')
+            ->setAttrib('placeholder', 'Дата');
         $this->addElement($date);
 
         $sum = $this->createElement('text', 'sum');
         $sum->setLabel('Сумма платежа:')
+            ->setRequired()
             ->setValidators(array('Digits'))
             ->setAttrib('placeholder', 'Введите сумму');
         $this->addElement($sum);
