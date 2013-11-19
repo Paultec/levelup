@@ -8,13 +8,13 @@
     <file path="$PROJECT_DIR$/../levelupERROR/application/configs/application.ini" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381310374502" ignored="false" />
     <file path="$PROJECT_DIR$/../levelupERROR/application/models/DbTable/Status.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381310688810" ignored="false" />
     <file path="/Status.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381325156737" ignored="false" />
-    <file path="/UserController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384428950166" ignored="false" />
+    <file path="/UserController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384679967975" ignored="false" />
     <file path="/get-info.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381832268527" ignored="false" />
     <file path="/AddUser.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381759518513" ignored="false" />
     <file path="/UsersRole.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381327432049" ignored="false" />
     <file path="/UsersLogin.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381479136031" ignored="false" />
     <file path="/UsersInfo.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381826839565" ignored="false" />
-    <file path="/layout.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384507953616" ignored="false" />
+    <file path="/layout.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384765548284" ignored="false" />
     <file path="/add.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384507876551" ignored="false" />
     <file path="/a.dummy" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381473850490" ignored="false" />
     <file path="/users-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384431665585" ignored="false" />
@@ -36,12 +36,12 @@
     <file path="$PROJECT_DIR$/../levelupPaul/application/controllers/StudentsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1382946012308" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Users.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384425400220" ignored="false" />
     <file path="/Users.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1383826088407" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/.zfproject.xml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384506609241" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/controllers/UserController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384430867093" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/.zfproject.xml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764437672" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/controllers/UserController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384680000311" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/forms/AddUser.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384425478654" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/user/add-user.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1383827966923" ignored="false" />
     <file path="/add-user.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1383827966923" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/layouts/scripts/layout.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384507953616" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/layouts/scripts/layout.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384765548284" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/user/get-all-users.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1383828915940" ignored="false" />
     <file path="/get-all-users.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1383828915940" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/partials/users-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384431668914" ignored="false" />
@@ -55,24 +55,37 @@
     <file path="/auth.js" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384430175510" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/forms/Auth.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384429266213" ignored="false" />
     <file path="/Auth.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384425048663" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/Bootstrap.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384433036387" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/Bootstrap.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384767995404" ignored="false" />
     <file path="/get-all-user.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384430985991" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/public/css/mystyle.css" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384433419095" ignored="false" />
     <file path="/style.css" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384432983730" ignored="false" />
     <file path="/mystyle.css" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384433417457" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Category.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384503497573" ignored="false" />
     <file path="/Category.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384503497573" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/forms/AddGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384508533640" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/forms/AddGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677727177" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Goods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510907930" ignored="false" />
     <file path="/Goods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510899896" ignored="false" />
-    <file path="/AddGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384508125197" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/partials/goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384506399691" ignored="false" />
-    <file path="/goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384506365518" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/controllers/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384511127522" ignored="false" />
-    <file path="/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510221309" ignored="false" />
+    <file path="/AddGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677385489" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/partials/goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677538198" ignored="false" />
+    <file path="/goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677537269" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/controllers/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384679531526" ignored="false" />
+    <file path="/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384679525584" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/add.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384507876551" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510279687" ignored="false" />
-    <file path="/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510278932" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677577998" ignored="false" />
+    <file path="/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677577998" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Manufacturer.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384676797751" ignored="false" />
+    <file path="/Manufacturer.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384676797751" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/forms/IncomeGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384767452068" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/income-goods.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384695830503" ignored="false" />
+    <file path="/income-goods.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384695577489" ignored="false" />
+    <file path="/IncomeGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384765691261" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Operation.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764597726" ignored="false" />
+    <file path="/Operation.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764585795" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Store.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764772994" ignored="false" />
+    <file path="/Store.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764772994" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Register.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764980324" ignored="false" />
+    <file path="/Register.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384764974337" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/public/js/script.js" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384768066745" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,28 +105,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Student.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/forms/Student.php">
+      <file leaf-file-name="Bootstrap.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="37" column="12" selection-start="1400" selection-end="1459" vertical-scroll-proportion="-24.192308">
+            <state line="11" column="0" selection-start="389" selection-end="1396" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UsersInfo.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/UsersInfo.php">
+      <file leaf-file-name="DataController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="students-row.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/partials/students-row.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-3.2692308">
               <folding />
             </state>
           </provider>
@@ -153,8 +157,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="y" value="2" />
-    <option name="width" value="844" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1696" />
     <option name="height" value="1026" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -171,7 +176,7 @@
     <option name="STATE" value="0" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+    <navigator proportions="" version="1" splitterProportion="0.5">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -182,334 +187,16 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="user" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="students" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="partials" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="index" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="DbTable" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="layouts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="scripts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="forms" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="levelup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="application" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="configs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="options.lastSelected" value="editor.preferences.appearance" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../rybhata" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../levelupPaul" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -536,14 +223,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="2" width="844" height="1026" extended-state="0" />
+    <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33248082" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.378213" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -619,110 +306,84 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/edit.phtml">
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Schedule.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="22" selection-start="28" selection-end="28" vertical-scroll-proportion="0.020858895" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../rybhata/public/css/formstyler.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/css/formstyler.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="13" selection-start="1893" selection-end="1893" vertical-scroll-proportion="0.68204486">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/login.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="23" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/logout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/UserController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="0" selection-start="3309" selection-end="3309" vertical-scroll-proportion="0.021197008">
-          <folding />
-        </state>
+        <state line="81" column="0" selection-start="3309" selection-end="3309" vertical-scroll-proportion="0.020858895" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/Csv.php">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/students/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/ParsController.php">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/index.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Schedule.php">
+    <entry file="file://$PROJECT_DIR$/public/js/script.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/partials/classrooms-row.phtml">
+    <entry file="file://$PROJECT_DIR$/public/js/scrollbar.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/partials/students-row.phtml">
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="129" selection-end="129" vertical-scroll-proportion="-3.2692308">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Classroom.php">
+    <entry file="file://$PROJECT_DIR$/public/js/tabsort.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="120" selection-end="357" vertical-scroll-proportion="0.14837906">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-2.8406658" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Groups.php">
+    <entry file="file://$PROJECT_DIR$/public/js/tipsy.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="409" selection-end="409" vertical-scroll-proportion="0.38154614">
-          <folding />
-        </state>
+        <state line="0" column="260" selection-start="260" selection-end="260" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/formstyler.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="3.8076923" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/students/add.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/controllers/StudentsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.75092024" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Student.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="12" selection-start="1400" selection-end="1459" vertical-scroll-proportion="-24.192308">
+        <state line="38" column="43" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.48834357" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/Bootstrap.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="389" selection-end="1396" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/UsersInfo.php">
+    <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
