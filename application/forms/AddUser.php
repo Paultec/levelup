@@ -17,14 +17,15 @@ class Application_Form_AddUser extends Zend_Form
         $this->addElement($role);
 
         $login = $this->createElement('text', 'usersLogin');
-        $login->setLabel('Логин для этого пользователся:')
+        $login->setLabel('Логин для этого пользователя:')
             ->setAttrib('placeholder', 'Введите логин')
             ->setRequired();
         $this->addElement($login);
 
         $password = $this->createElement('text', 'usersPassword');
         $password->setLabel('Пароль для этого пользователся:')
-            ->setAttrib('placeholder', 'Введите пароль');
+            ->setAttrib('placeholder', 'Введите пароль')
+            ->setRequired();
         $this->addElement($password);
 
         $status = $this->createElement('select', 'idStatus');
@@ -36,13 +37,15 @@ class Application_Form_AddUser extends Zend_Form
         $firstName = $this->createElement('text', 'firstName');
         $firstName->setLabel('Имя:')
             ->setValidators(array('Alpha'))
-            ->setAttrib('placeholder', 'Введите имя');
+            ->setAttrib('placeholder', 'Введите имя')
+            ->setRequired();
         $this->addElement($firstName);
 
         $lastName = $this->createElement('text', 'lastName');
         $lastName->setLabel('Фамилия:')
             ->setValidators(array('Alpha'))
-            ->setAttrib('placeholder', 'Введите фамилию');
+            ->setAttrib('placeholder', 'Введите фамилию')
+            ->setRequired();
         $this->addElement($lastName);
         
         $patronymic = $this->createElement('text', 'patronymic');
@@ -56,22 +59,26 @@ class Application_Form_AddUser extends Zend_Form
             ->setAttrib('class', 'date')            
             ->setAttrib('placeholder', 'Дата рождения');
         $this->addElement($birthday);
-        
 
-        $passport = $this->createElement('text', 'passportNumber');
-        $passport->setLabel('Паспорт, серия/номер:')            
+        $passport = $this->createElement('text', 'passport');
+        $passport->setLabel('Паспорт, серия/номер:')
+            ->setRequired()
             ->setAttrib('placeholder', 'Паспорт, серия/номер');
         $this->addElement($passport);
 
         $inn = $this->createElement('text', 'inn');
         $inn->setLabel('ИНН:')
+            ->setRequired()
             ->setValidators(array('Digits'))
             ->setAttrib('placeholder', 'Введите ИНН');
         $this->addElement($inn);
 
-        $photo = $this->createElement('text', 'photo');
+        $photo = $this->createElement('file', 'photo');
         $photo->setLabel('Фото:')
-            ->setAttrib('placeholder', 'Выберите файл');
+              ->addValidator('Size', false, 1024000)
+              ->addValidator('Extension', false, 'jpg,png,gif')
+              ->setDestination('c:/xampp/htdocs/levelup/public/img/photos/users') // Абсолютный путь
+              ->addFilter('Rename', substr(md5(microtime()), 0, 10).'.jpg');
         $this->addElement($photo);
 
         $phone = $this->createElement('text', 'phone');

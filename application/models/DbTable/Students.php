@@ -22,7 +22,7 @@ class Application_Model_DbTable_Students extends Zend_Db_Table_Abstract
     }
 
     public function addStudent($data)
-    {
+    {        
         return $this->insert($data);
     }
 

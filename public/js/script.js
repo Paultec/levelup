@@ -47,4 +47,31 @@ $(function(){
 	
 	// Всплывающие подсказки
 	$('i').tipsy();
+
+	
+	// Анимация логотипа
+	function doMagicOut() {			
+		$('#l').animo({animation: "fadeOutLeft", duration: 0.5, keep: true}, function() {
+			$('#e').animo({animation: "fadeOutUp", duration: 0.5, keep: true}, function() {
+				$('#v').animo({animation: "fadeOutDown", duration: 0.5, keep: true}, function() {
+					$('#ee').animo({animation: "fadeOutLeft", duration: 0.5, keep: true}, function() {
+						$('#ll').animo({animation: "fadeOutRight", duration: 0.5, keep: true}, doMagicIn());
+					});
+				});
+			});
+		});
+	}
+
+	function doMagicIn() {
+		$('#l').animo({animation: "fadeInLeft", duration: 0.5}, function() {
+			$('#e').animo({animation: "fadeInUp", duration: 0.5}, function() {
+				$('#v').animo({animation: "fadeInDown", duration: 0.5}, function() {
+					$('#ee').animo({animation: "fadeInLeft", duration: 0.5}, function() {
+						$('#ll').animo({animation: "fadeInRight", duration: 0.5});
+					});
+				});
+			});
+		});
+	}	
+	setInterval(doMagicOut, 30000);	
 });
