@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Время создания: Ноя 04 2013 г., 14:08
+-- Время создания: Ноя 18 2013 г., 16:27
 -- Версия сервера: 5.6.11
 -- Версия PHP: 5.5.3
 
@@ -107,7 +107,7 @@ CREATE TABLE IF NOT EXISTS `payments` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `idStudent` int(11) NOT NULL,
   `sum` smallint(6) NOT NULL,
-  `date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  `date` varchar(15) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idStudent` (`idStudent`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
@@ -239,33 +239,27 @@ CREATE TABLE IF NOT EXISTS `students` (
   `skype` varchar(50) NOT NULL,
   `linkVK` varchar(50) DEFAULT NULL,
   `linkFB` varchar(50) DEFAULT NULL,
-  `photo` varchar(255) NOT NULL,
+  `photo` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `status` (`idStatus`),
   KEY `status_2` (`idStatus`),
   KEY `idGroup` (`idGroup`),
   KEY `idGroup_2` (`idGroup`),
   KEY `idGroup_3` (`idGroup`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=133 ;
 
 --
 -- Дамп данных таблицы `students`
 --
 
 INSERT INTO `students` (`id`, `timestamp`, `numberContract`, `dateContract`, `lastNameCustomer`, `nameCustomer`, `patronymicCustomer`, `totalSumContractNum`, `totalSumContractA`, `nameCourse`, `durationHours`, `numberMonths`, `passportCustomer`, `INNCustomer`, `addressCustomer`, `telHouseCustomer`, `telMobCustomer`, `emailCustomer`, `lastNameStudent`, `nameStudent`, `patronymicStudent`, `passportStudent`, `INNStudent`, `addressStudent`, `telHouseStudent`, `telMobStudent`, `emailStudent`, `idStatus`, `idGroup`, `birthday`, `skype`, `linkVK`, `linkFB`, `photo`) VALUES
-(1, '23.10.2013', '1234556', '23.10.2013', 'фамилия', 'имя', 'отчество', '1000', 'Тысяча', 'курс', '300', '5', 'фн24556', '12342354', 'адрес', '8093564', '243635654', 'email@mail.com', 'фамилия', 'имя', 'отчество', 'ваыпвкпр', '124546574', 'адрес', '34534576', '215326456', 'email@mail.ru', 1, 2, '23.10.2013', 'skype', 'vk', 'facebook', 'photo'),
-(2, '07.10.2013', '11111111111', '07.10.2013', 'Фамилия1', 'Имя1', 'Отчество1', '1000', '1000', 'Название1', '24', '4', 'АН252525', '123456', 'Адрес1', '8080808', '3808888888', 'email@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(3, '08.10.2013', '22222222222', '08.10.2013', 'Фамилия2', 'Имя2', 'Отчество2', '2000', '2000', 'Название2', '24', '4', 'АН353535', '321456', 'Адрес2', '9090909', '3809999999', 'email2@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(4, '09.10.2013', '33333333333', '09.10.2013', 'Фамилия3', 'Имя3', 'Отчество3', '3000', '3000', 'Название3', '24', '4', 'АН454545', '231456', 'Адрес3', '8090909', '3801011010', 'email3@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(5, '07.10.2013', '11111111111', '07.10.2013', 'Фамилия1', 'Имя1', 'Отчество1', '1000', '1000', 'Название1', '24', '4', 'АН252525', '123456', 'Адрес1', '8080808', '3808888888', 'email@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(6, '08.10.2013', '22222222222', '08.10.2013', 'Фамилия2', 'Имя2', 'Отчество2', '2000', '2000', 'Название2', '24', '4', 'АН353535', '321456', 'Адрес2', '9090909', '3809999999', 'email2@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(7, '09.10.2013', '33333333333', '09.10.2013', 'Фамилия3', 'Имя3', 'Отчество3', '3000', '3000', 'Название3', '24', '4', 'АН454545', '231456', 'Адрес3', '8090909', '3801011010', 'email3@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(8, '07.10.2013', '11111111111', '07.10.2013', 'Фамилия1', 'Имя1', 'Отчество1', '1000', '1000', 'Название1', '24', '4', 'АН252525', '123456', 'Адрес1', '8080808', '3808888888', 'email@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(9, '08.10.2013', '22222222222', '08.10.2013', 'Фамилия2', 'Имя2', 'Отчество2', '2000', '2000', 'Название2', '24', '4', 'АН353535', '321456', 'Адрес2', '9090909', '3809999999', 'email2@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(10, '09.10.2013', '33333333333', '09.10.2013', 'Фамилия3', 'Имя3', 'Отчество3', '3000', '3000', 'Название3', '24', '4', 'АН454545', '231456', 'Адрес3', '8090909', '3801011010', 'email3@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(26, '07.10.2013', '11111111111', '07.10.2013', 'Фамилия1', 'Имя1', 'Отчество1', '1000', '1000', 'Название1', '24', '4', 'АН252525', '123456', 'Адрес1', '8080808', '3808888888', 'email@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(27, '08.10.2013', '22222222222', '08.10.2013', 'Фамилия2', 'Имя2', 'Отчество2', '2000', '2000', 'Название2', '24', '4', 'АН353535', '321456', 'Адрес2', '9090909', '3809999999', 'email2@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, ''),
-(28, '09.10.2013', '33333333333', '09.10.2013', 'Фамилия3', 'Имя3', 'Отчество3', '3000', '3000', 'Название3', '24', '4', 'АН454545', '231456', 'Адрес3', '8090909', '3801011010', 'email3@mail.com', '', '', '', '', '', '', '', '', '', 1, 1, '', '', NULL, NULL, '');
+(126, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, '', '', '', '', 'bf81e06b04.jpg'),
+(127, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, '', '', '', '', '0d3c1d8082.jpg'),
+(128, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, '', '', '', '', '09f1fc72a9.jpg'),
+(129, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, '', '', '', '', '26bcd8214a.jpg'),
+(130, '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, '', '', '', '', '6732cac41c.jpg'),
+(131, '18.11.2013', '1234556', '18.11.2013', 'фамилия', 'имя', 'отчество', '1000', 'Тысяча', 'курс по php', '120', '5', 'АН252525', '12342354', 'адрес', '8093564', '3808888888', 'email@mail.com', 'Фамилия', 'Имя', 'Отчество', '13214535ва', '12345569', 'Адрес', '8080808', '3808888888', 'email@mail.ru', 2, 2, '18.11.2013', 'skype', 'vk.com', 'facebook', '27473184b8.jpg'),
+(132, '', '1234556', '', 'фамилия', 'имя', 'отчество', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 1, 1, '', '', '', '', NULL);
 
 -- --------------------------------------------------------
 
@@ -295,21 +289,21 @@ CREATE TABLE IF NOT EXISTS `users_info` (
   `birthday` varchar(15) NOT NULL,
   `passport` varchar(15) NOT NULL,
   `inn` varchar(14) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `photo` varchar(255) DEFAULT NULL,
   `phone` varchar(25) NOT NULL,
-  `phoneFurther` varchar(25) DEFAULT NULL,
+  `phoneFurther` varchar(25) NOT NULL,
   `email` varchar(50) NOT NULL,
-  `emailFurther` varchar(50) DEFAULT NULL,
+  `emailFurther` varchar(50) NOT NULL,
   `skype` varchar(50) NOT NULL,
-  `linkVK` varchar(50) DEFAULT NULL,
-  `linkFB` varchar(50) DEFAULT NULL,
+  `linkVK` varchar(50) NOT NULL,
+  `linkFB` varchar(50) NOT NULL,
   `address` varchar(255) NOT NULL,
   `idStatus` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `idUsersRole` (`idUsersRole`),
   KEY `status` (`idStatus`),
   KEY `idStatus` (`idStatus`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=25 ;
 
 --
 -- Дамп данных таблицы `users_info`
@@ -319,7 +313,8 @@ INSERT INTO `users_info` (`id`, `idUsersRole`, `firstName`, `lastName`, `patrony
 (1, 1, 'Иван', 'Иванов', 'Иванович', '2013-10-01', '123456', '01234567890123', 'ссылка на фото', '+38-056-777-77-77', '', 'admin@levelup.ua', '', 'adminSkype', 'ссылка на ВКонтакте', 'ссылка на Фейсбук', 'г. Днепропетровск', 2),
 (2, 2, 'Анна', 'Орлова', 'Львовна', '1990-12-31', '111222', '12345678910112', 'ссылка на фото ', '111-22-33', '222-33-44', 'anna@anna.ua', '', 'annavskype', 'ссылка', 'ссылка', 'Украина', 1),
 (3, 3, 'Петр', 'Куликов', 'Петрович', '1985-01-31', '777777', '9', 'фото', '777-77-77', '777-88-88', 'qw@qw.ua', '', 'petr', 'petrVK', 'petrFB', 'USA', 1),
-(4, 3, 'Sam', '', '', '1999-10-10', '', '123123', '', '', '', '', '', '', '', '', '', 1);
+(4, 3, 'Sam', '', '', '1999-10-10', '', '123123', '', '', '', '', '', '', '', '', '', 1),
+(24, 1, 'Имя', 'Фамилия', '', '', '123456фы', '12423545', NULL, '', '', '', '', '', '', '', '', 1);
 
 -- --------------------------------------------------------
 
@@ -335,7 +330,7 @@ CREATE TABLE IF NOT EXISTS `users_login` (
   PRIMARY KEY (`id`),
   KEY `idUsersInfo` (`idUsersInfo`),
   KEY `idUsersInfo_2` (`idUsersInfo`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Дамп данных таблицы `users_login`
@@ -345,7 +340,8 @@ INSERT INTO `users_login` (`id`, `usersLogin`, `usersPassword`, `idUsersInfo`) V
 (1, 'admin', 'admin', 1),
 (2, 'manager', 'manager', 2),
 (3, 'lecturer', 'lecturer', 3),
-(4, 'lector', 'lector', 4);
+(4, 'lector', 'lector', 4),
+(9, 'newadmin', 'pass', 24);
 
 -- --------------------------------------------------------
 
