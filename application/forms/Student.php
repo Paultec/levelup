@@ -211,7 +211,7 @@ class Application_Form_Student extends Zend_Form
         $photo->setLabel('Фото:')
               ->addValidator('Size', false, 1024000)
               ->addValidator('Extension', false, 'jpg,png,gif')
-              ->setDestination('c:/xampp/htdocs/levelup/public/img/photos/students') // Абсолютный путь
+              ->setDestination('c:/xampp/htdocs/projects/levelup/public/img/photos/students') // Абсолютный путь
               ->addFilter('Rename', substr(md5(microtime()), 0, 10).'.jpg');
         $this->addElement($photo);
         

@@ -142,8 +142,28 @@ class UserController extends Zend_Controller_Action
         $this->view->form = $form;
     }
 
+    public function deleteAction()
+    {
+        $data = $this->_request->getParams();
+        if ($data['deleteUser'] == 'Удалить') {
+            $user = new Application_Model_DbTable_UsersInfo();
+            $this->view->user = $user->getUser($data['id']);
+        } else {
+            if ($data['delete'] == 'yes') {
+                $user = new Application_Model_DbTable_UsersInfo();
+                $user->deleteUser($data['id']);
+                return $this->_forward('index');
+            }
+            else {
+                return $this->_forward('index');
+            }
+        }
+    }
+
 
 }
+
+
 
 
 

@@ -128,8 +128,27 @@ class StudentsControllerTest extends Zend_Test_PHPUnit_ControllerTestCase
             );
     }
 
+    public function testDeleteAction()
+    {
+        $params = array('action' => 'delete', 'controller' => 'Students', 'module' => 'default');
+        $urlParams = $this->urlizeOptions($params);
+        $url = $this->url($urlParams);
+        $this->dispatch($url);
+        
+        // assertions
+        $this->assertModule($urlParams['module']);
+        $this->assertController($urlParams['controller']);
+        $this->assertAction($urlParams['action']);
+        $this->assertQueryContentContains(
+            'div#view-content p',
+            'View script for controller <b>' . $params['controller'] . '</b> and script/action name <b>' . $params['action'] . '</b>'
+            );
+    }
+
 
 }
+
+
 
 
 

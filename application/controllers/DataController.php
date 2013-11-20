@@ -65,7 +65,20 @@ class DataController extends Zend_Controller_Action
 
     public function deleteClassroomAction()
     {
-        // action body
+        $data = $this->_request->getParams();
+        if ($data['deleteClassroom'] == 'Удалить') {
+            $classroom = new Application_Model_DbTable_Classroom();
+            $this->view->classroom = $classroom->getClassroom($data['id']);
+        } else {
+            if ($data['delete'] == 'yes') {
+                $classroom = new Application_Model_DbTable_Classroom();
+                $classroom->deleteClassroom($data['id']);
+                return $this->_forward('get-all-classrooms');
+            }
+            else {
+                return $this->_forward('get-all-classrooms');
+            }
+        }
     }
 
     public function getScheduleByClassroomAction()

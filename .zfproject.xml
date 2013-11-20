@@ -19,6 +19,7 @@
           <actionMethod actionName="logout"/>
           <actionMethod actionName="add"/>
           <actionMethod actionName="edit"/>
+          <actionMethod actionName="delete"/>
         </controllerFile>
         <controllerFile controllerName="Students">
           <actionMethod actionName="index"/>
@@ -28,6 +29,7 @@
           <actionMethod actionName="addPayment"/>
           <actionMethod actionName="editPayment"/>
           <actionMethod actionName="getPayment"/>
+          <actionMethod actionName="delete"/>
         </controllerFile>
         <controllerFile controllerName="Data">
           <actionMethod actionName="index"/>
@@ -147,6 +149,12 @@
           <viewControllerScriptsDirectory forControllerName="Students">
             <viewScriptFile forActionName="getPayment"/>
           </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="User">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
+          <viewControllerScriptsDirectory forControllerName="Students">
+            <viewScriptFile forActionName="delete"/>
+          </viewControllerScriptsDirectory>
         </viewScriptsDirectory>
         <viewHelpersDirectory/>
         <viewFiltersDirectory enabled="false"/>
@@ -192,6 +200,7 @@
             <testApplicationActionMethod forActionName="logout"/>
             <testApplicationActionMethod forActionName="add"/>
             <testApplicationActionMethod forActionName="edit"/>
+            <testApplicationActionMethod forActionName="delete"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Students">
             <testApplicationActionMethod forActionName="index"/>
@@ -201,6 +210,7 @@
             <testApplicationActionMethod forActionName="addPayment"/>
             <testApplicationActionMethod forActionName="editPayment"/>
             <testApplicationActionMethod forActionName="getPayment"/>
+            <testApplicationActionMethod forActionName="delete"/>
           </testApplicationControllerFile>
           <testApplicationControllerFile forControllerName="Data">
             <testApplicationActionMethod forActionName="index"/>

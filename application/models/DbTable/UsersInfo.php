@@ -46,5 +46,10 @@ class Application_Model_DbTable_UsersInfo extends Zend_Db_Table_Abstract
     {
         return $this->update($data, 'id='.(int)$id);
     }
+
+    public function deleteUser($id)
+    {
+        $this->delete('id IN(' . $id . ')');
+    }
 }
 

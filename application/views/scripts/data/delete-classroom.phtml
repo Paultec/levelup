@@ -1,4 +1,12 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Data</b> and script/action name <b>deleteClassroom</b></p>
-</div>
+<?php
+$this->title = 'Удаление аудитории';
+$this->headTitle($this->title);
+?>
+<p>Вы действительно хотите удалить аудиторию <?php echo $this->escape($this->classroom['number']); ?></p>
+<form method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-classroom')); ?>">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->classroom['id']; ?>" />
+        <input type="submit" name="delete" value="yes" />
+        <input type="submit" name="delete" value="no" />
+    </div>
+</form>

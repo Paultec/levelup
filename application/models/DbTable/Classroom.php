@@ -30,5 +30,11 @@ class Application_Model_DbTable_Classroom extends Zend_Db_Table_Abstract
     {
         return $this->update($data, 'id='.(int)$id);
     }
+
+    public function deleteClassroom($id)
+    {
+        $this->delete('id IN(' . $id . ')');
+    }
+
 }
 

@@ -30,5 +30,10 @@ class Application_Model_DbTable_Students extends Zend_Db_Table_Abstract
     {
         return $this->update($data, 'id='.(int)$id);
     }
+
+    public function deleteStudent($id)
+    {
+        $this->delete('id IN(' . $id . ')');
+    }
 }
 

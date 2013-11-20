@@ -2,22 +2,20 @@
 
 class StudentsController extends Zend_Controller_Action
 {
-    const UPLOADED_FILES_PATH = 'c:/xampp/htdocs/levelup/public/img/photos';
 
     public function init()
     {
         /* Initialize action controller here */
     }
 
-    
     protected function _makeFilename($name, $thumbnail = false)
-    {   if ($thumbnail) {
+    {
+if ($thumbnail) {
             return $name . '.thumb.jpg';
         }
         return $name . '.jpg';
     }
 
-    
     public function indexAction()
     {
         $students = new Application_Model_DbTable_Students();
@@ -26,7 +24,10 @@ class StudentsController extends Zend_Controller_Action
 
     public function getInfoAction()
     {
-        // action body
+        $id = $this->_getParam('id');
+        $student = new Application_Model_DbTable_Students();
+        //print_r($student->getStudent($id));
+        $this->view->student = $student->getStudent($id);
     }
 
     public function addAction()
@@ -34,13 +35,40 @@ class StudentsController extends Zend_Controller_Action
         $form = new Application_Form_Student();
         if ($this->_request->isPost()){
             if ($form->isValid($this->_request->getParams())){
-                $formData = $form->getValues();                
+                $formData = $form->getValues();
+                if (!$formData['lastNameStudent']) {
+                    $formData['lastNameStudent'] = $formData['lastNameCustomer'];
+                }
+                if (!$formData['nameStudent']) {
+                    $formData['nameStudent'] = $formData['nameCustomer'];
+                }
+                if (!$formData['patronymicStudent']) {
+                    $formData['patronymicStudent'] = $formData['patronymicCustomer'];
+                }
+                if (!$formData['passportStudent']) {
+                    $formData['passportStudent'] = $formData['passportCustomer'];
+                }
+                if (!$formData['INNStudent']) {
+                    $formData['INNStudent'] = $formData['INNCustomer'];
+                }
+                if (!$formData['addressStudent']) {
+                    $formData['addressStudent'] = $formData['addressCustomer'];
+                }
+                if (!$formData['telHouseStudent']) {
+                    $formData['telHouseStudent'] = $formData['telHouseCustomer'];
+                }
+                if (!$formData['telMobStudent']) {
+                    $formData['telMobStudent'] = $formData['telMobCustomer'];
+                }
+                if (!$formData['telMobStudent']) {
+                    $formData['telMobStudent'] = $formData['telMobCustomer'];
+                }
+                if (!$formData['emailStudent']) {
+                    $formData['emailStudent'] = $formData['emailCustomer'];
+                }
 
                 $student = new Application_Model_DbTable_Students();
                 $student->addStudent($formData);
-
-                //$this->_helper->layout()->message = 'Вы добавили пользователя ' . $this->_request->getParam('usersLogin') .'!';
-                //$this->_helper->layout()->message_class = 'alert-success';
                 return $this->_forward('index', 'students');
             } else {
                 $this->view->form = $form;
@@ -51,11 +79,25 @@ class StudentsController extends Zend_Controller_Action
 
     public function editAction()
     {
-        // action body
+        $form = new Application_Form_Student();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $id = $this->_getParam('id');
+                $student = new Application_Model_DbTable_Students();
+                $student->editStudent($id, $formData);
+                return $this->_forward('index');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $student = new Application_Model_DbTable_Students();
+                    $form->populate($student->getStudent($id));
+                }
+            }
+        }
+        $this->view->form = $form;
     }
 
-    /*Разобраться, почему в методе не срабатывает $formData = $form->getValues();
-    Из-за этого пришлось получать значения из формы явным путем и присваивать в массив $formData*/
     public function addPaymentAction()
     {
         $form = new Application_Form_Payment();
@@ -93,8 +135,28 @@ class StudentsController extends Zend_Controller_Action
         // action body
     }
 
+    public function deleteAction()
+    {
+        $data = $this->_request->getParams();
+        if ($data['deleteStudent'] == 'Удалить') {
+            $student = new Application_Model_DbTable_Students();
+            $this->view->student = $student->getStudent($data['id']);
+        } else {
+            if ($data['delete'] == 'yes') {
+                $student = new Application_Model_DbTable_Students();
+                $student->deleteStudent($data['id']);
+                return $this->_forward('index');
+            }
+            else {
+                return $this->_forward('index');
+            }
+        }
+    }
+
 
 }
+
+
 
 
 

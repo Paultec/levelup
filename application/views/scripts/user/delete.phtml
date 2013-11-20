@@ -1,0 +1,12 @@
+<?php
+$this->title = 'Удаление пользователя';
+$this->headTitle($this->title);
+?>
+<p>Вы действительно хотите удалить пользователя <?php echo $this->escape($this->user['firstName'].' '.$this->user['lastName']); ?></p>
+<form method="POST" action="<?php echo $this->url(array('controller'=>'user', 'action'=>'delete')); ?>">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->user['id']; ?>" />
+        <input type="submit" name="delete" value="yes" />
+        <input type="submit" name="delete" value="no" />
+    </div>
+</form>
