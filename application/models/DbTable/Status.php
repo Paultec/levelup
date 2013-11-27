@@ -14,9 +14,27 @@ class Application_Model_DbTable_Status extends Zend_Db_Table_Abstract
         return $status->toArray();
     }
 
-    public function addStatus($status)
+    public function getAllStatuses()
     {
-        return $this->insert($status);
+        $select = $this->select();
+        $select->order('status');
+        return $this->fetchAll($select);
     }
+
+    public function addStatus($data)
+    {
+        return $this->insert($data);
+    }
+
+    public function editStatus($id, $data)
+    {
+        return $this->update($data, 'id='.(int)$id);
+    }
+
+    public function deleteStatus($id)
+    {
+        $this->delete('id IN(' . $id . ')');
+    }
+
 }
 

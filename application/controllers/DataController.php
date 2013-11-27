@@ -146,8 +146,276 @@ class DataController extends Zend_Controller_Action
         // action body
     }
 
+    public function getAllStatusesAction()
+    {
+        $status = new Application_Model_DbTable_Status();
+        $this->view->statuses = $status->getAllStatuses();
+    }
+
+    public function editStatusAction()
+    {
+        $form = new Application_Form_Status();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $id = $this->_getParam('id');
+                $status = new Application_Model_DbTable_Status();
+                $status->editStatus($id, $formData);
+                return $this->_forward('get-all-statuses', 'data');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $status = new Application_Model_DbTable_Status();
+                    $form->populate($status->getStatus($id));
+                }
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function deleteStatusAction()
+    {
+        $data = $this->_request->getParams();
+        if ($data['deleteStatus'] == 'Удалить') {
+            $status = new Application_Model_DbTable_Status();
+            $this->view->status = $status->getStatus($data['id']);
+        } else {
+            if ($data['delete'] == 'yes') {
+                $status = new Application_Model_DbTable_Status();
+                $status->deleteStatus($data['id']);
+                return $this->_forward('get-all-statuses');
+            }
+            else {
+                return $this->_forward('get-all-statuses');
+            }
+        }
+    }
+
+    public function addStatusAction()
+    {
+        $form = new Application_Form_Status();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $status = new Application_Model_DbTable_Status();
+                $status->addStatus($formData);
+                return $this->_forward('get-all-statuses', 'data');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function addSubjectAction()
+    {
+        $form = new Application_Form_Subject();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $subject = new Application_Model_DbTable_Subjects();
+                $subject->addSubject($formData);
+                return $this->_forward('get-all-subjects', 'data');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function getSubjectAction()
+    {
+        // action body
+    }
+
+    public function getAllSubjectsAction()
+    {
+        $subject = new Application_Model_DbTable_Subjects();
+        $this->view->subjects = $subject->getAllSubject();
+    }
+
+    public function editSubjectAction()
+    {
+        $form = new Application_Form_Subject();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $id = $this->_getParam('id');
+                $subject = new Application_Model_DbTable_Subjects();
+                $subject->editSubject($id, $formData);
+                return $this->_forward('get-all-subjects', 'data');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $subject = new Application_Model_DbTable_Subjects();
+                    $form->populate($subject->getSubject($id));
+                }
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function deleteSubjectAction()
+    {
+        $data = $this->_request->getParams();
+        if ($data['deleteSubject'] == 'Удалить') {
+            $subject = new Application_Model_DbTable_Subjects();
+            $this->view->subject = $subject->getSubject($data['id']);
+        } else {
+            if ($data['delete'] == 'yes') {
+                $subject = new Application_Model_DbTable_Subjects();
+                $subject->deleteSubject($data['id']);
+                return $this->_forward('get-all-subjects');
+            }
+            else {
+                return $this->_forward('get-all-subjects');
+            }
+        }
+    }
+
+    public function addSpecialisationAction()
+    {
+        $form = new Application_Form_Specialisation();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                $subjectData = array('idSubject' => null);
+                $formDataSpec = array_diff_key($formData, $subjectData);
+                $specialisation = new Application_Model_DbTable_Specialisation();
+                $specialisation->addSpecialisation($formDataSpec);
+                $idSpec = $specialisation->getIdSpecialisation($formData['specialisation']);
+                foreach ($formData['idSubject'] as $idSub) {
+                    $data = array('idSpecialisation' => $idSpec, 'idSubject' => $idSub);
+                    $register = new Application_Model_DbTable_SubAndSpec();
+                    $register->addRegister($data);
+                }
+                return $this->_forward('get-all-specialisations', 'data');
+            } else {
+                $this->view->form = $form;
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function getSpecialisationAction()
+    {
+        // action body
+    }
+
+    public function getAllSpecialisationsAction()
+    {
+        $specialisation = new Application_Model_DbTable_Specialisation();
+        $this->view->specialisations = $specialisation->getAllSpecialisations();
+    }
+
+    public function editSpecialisationAction()
+    {
+        $form = new Application_Form_Specialisation();
+        if ($this->_request->isPost()){
+            if ($form->isValid($this->_request->getParams())){
+                $formData = $form->getValues();
+                print_r($formData);
+                $subjectData = array('idSubject' => null);
+                $formDataSpec = array_diff_key($formData, $subjectData);
+                $id = $this->_getParam('id');
+                print_r($formDataSpec);
+                $specialisation = new Application_Model_DbTable_Specialisation();
+                //$specialisation->editSpecialisation($id, $formDataSpec);
+                return $this->_forward('get-all-specialisations', 'data');
+            } else {
+                $id = $this->_getParam('id', 0);
+                if ($id > 0) {
+                    $specialisation = new Application_Model_DbTable_Specialisation();
+                    $form->populate($specialisation->getSpecialisation($id));
+                }
+            }
+        }
+        $this->view->form = $form;
+    }
+
+    public function deleteSpecialisationAction()
+    {
+        $data = $this->_request->getParams();
+        if ($data['deleteSpecialisation'] == 'Удалить') {
+            $specialisation = new Application_Model_DbTable_Specialisation();
+            $this->view->specialisation = $specialisation->getSpecialisation($data['id']);
+        } else {
+            if ($data['delete'] == 'yes') {
+                $specialisation = new Application_Model_DbTable_Specialisation();
+                $specialisation->deleteSpecialisation($data['id']);
+                return $this->_forward('get-all-specialisations');
+            }
+            else {
+                return $this->_forward('get-all-specialisations');
+            }
+        }
+    }
+
+    public function addGroupAction()
+    {
+        // action body
+    }
+
+    public function getGroupAction()
+    {
+        // action body
+    }
+
+    public function getAllGroupsAction()
+    {
+        // action body
+    }
+
+    public function editGriopAction()
+    {
+        // action body
+    }
+
+    public function deleteGroupAction()
+    {
+        // action body
+    }
+
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
