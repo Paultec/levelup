@@ -10,6 +10,7 @@ class Application_Form_Classroom extends Zend_Form
 
         $number = $this->createElement('text', 'number');
         $number->setLabel('Номер аудитории:')
+            ->setAttrib('required', 'required')
             ->setRequired()
             ->setAttrib('placeholder', 'Введите номер');
         $this->addElement($number);

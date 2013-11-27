@@ -8,14 +8,6 @@ class StudentsController extends Zend_Controller_Action
         /* Initialize action controller here */
     }
 
-    protected function _makeFilename($name, $thumbnail = false)
-    {
-if ($thumbnail) {
-            return $name . '.thumb.jpg';
-        }
-        return $name . '.jpg';
-    }
-
     public function indexAction()
     {
         $students = new Application_Model_DbTable_Students();
@@ -83,10 +75,16 @@ if ($thumbnail) {
         if ($this->_request->isPost()){
             if ($form->isValid($this->_request->getParams())){
                 $formData = $form->getValues();
+                if(!$formData['photo']){
+                    $student = new Application_Model_DbTable_Students();
+                    $currentUser = $student->getStudent($formData['id']);
+                    $formData['photo'] = $currentUser['photo'];
+                }
                 $id = $this->_getParam('id');
                 $student = new Application_Model_DbTable_Students();
                 $student->editStudent($id, $formData);
-                return $this->_forward('index');
+                header('Location: /students');
+                //return $this->_forward('index');
             } else {
                 $id = $this->_getParam('id', 0);
                 if ($id > 0) {

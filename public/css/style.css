@@ -2,7 +2,17 @@
 
 body{
 	font: 16px 'PT Sans', Verdana, Arial, sans-serif;
-	min-width: 800px;
+	min-width: 800px;	
+	background: #FFFFFF;
+	background: -moz-linear-gradient(top,  #7bb4e5 0%, #ffffff 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#7bb4e5), color-stop(100%,#ffffff));
+	background: -webkit-linear-gradient(top,  #7bb4e5 0%,#ffffff 100%);
+	background: -o-linear-gradient(top,  #7bb4e5 0%,#ffffff 100%);
+	background: -ms-linear-gradient(top,  #7bb4e5 0%,#ffffff 100%);
+	background: linear-gradient(to bottom,  #7bb4e5 0%,#ffffff 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7bb4e5', endColorstr='#ffffff',GradientType=0 );
+	background-size: 100% 100px;
+	background-repeat: no-repeat;
 }
 
 strong{
@@ -61,6 +71,7 @@ a:hover{
 
 .errors, .errors > li{
 	color: red;
+	display: none;
 }
 
 #up{
@@ -812,4 +823,34 @@ form{
 
 #ui-datepicker-div{
 	font-size: .9em;
+}
+
+/* Псевдоссылка */
+.fakeL{
+	color: #005D99;	
+}
+
+.fakeL:hover{
+	color: #005D99;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+/* Div для всплывающего фото */
+#showImgDiv{
+	position: absolute; 
+	display: none;
+}
+
+#showImgDiv img{
+	width: 150px;
+	height: 150px;
+	border: 1px solid rgba(0, 189, 255, 0.5);
+}
+
+/* Отметка строк, где есть фото */
+.eye{
+	padding-left: 15px;
+	background: url('/img/eye.png') no-repeat center left;
+	cursor: default;
 }

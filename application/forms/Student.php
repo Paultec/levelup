@@ -1,6 +1,8 @@
 <?php
 class Application_Form_Student extends Zend_Form
 {
+    const PHOTO_PATH = '/img/photos/students';
+    
     public function init()
     {
         $id = $this->createElement('hidden', 'id');
@@ -34,8 +36,8 @@ class Application_Form_Student extends Zend_Form
         $this->addElement($timestamp);
 
         $numberContract = $this->createElement('text', 'numberContract');
-        $numberContract->setLabel('Номер договора:')
-            ->setRequired()
+        $numberContract->setLabel('Номер договора: *')
+            ->setAttrib('required', 'required')            
             ->setValidators(array('Alnum'))
             ->setAttrib('placeholder', 'Номер договора');
         $this->addElement($numberContract);        
@@ -47,22 +49,22 @@ class Application_Form_Student extends Zend_Form
         $this->addElement($dateContract);
 
         $lastNameCustomer = $this->createElement('text', 'lastNameCustomer');
-        $lastNameCustomer->setLabel('Фамилия Заказчика обучения:')
-            ->setRequired()
+        $lastNameCustomer->setLabel('Фамилия Заказчика обучения: *')
+            ->setAttrib('required', 'required')
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Фамилия Заказчика обучения');
         $this->addElement($lastNameCustomer);
 
         $nameCustomer = $this->createElement('text', 'nameCustomer');
-        $nameCustomer->setLabel('Имя Заказчика обучения:')
-            ->setRequired()
+        $nameCustomer->setLabel('Имя Заказчика обучения: *')
+            ->setAttrib('required', 'required')
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Имя Заказчика обучения');
         $this->addElement($nameCustomer);
 
         $patronymicCustomer = $this->createElement('text', 'patronymicCustomer');
-        $patronymicCustomer->setLabel('Отчество Заказчика обучения:')
-            ->setRequired()
+        $patronymicCustomer->setLabel('Отчество Заказчика обучения: *')
+            ->setAttrib('required', 'required')
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Отчество Заказчика обучения');
         $this->addElement($patronymicCustomer);
@@ -211,7 +213,7 @@ class Application_Form_Student extends Zend_Form
         $photo->setLabel('Фото:')
               ->addValidator('Size', false, 1024000)
               ->addValidator('Extension', false, 'jpg,png,gif')
-              ->setDestination('c:/xampp/htdocs/projects/levelup/public/img/photos/students') // Абсолютный путь
+              ->setDestination($_SERVER['DOCUMENT_ROOT'] .self::PHOTO_PATH)
               ->addFilter('Rename', substr(md5(microtime()), 0, 10).'.jpg');
         $this->addElement($photo);
         

@@ -2,6 +2,7 @@
 
 class Application_Form_AddUser extends Zend_Form
 {
+    const PHOTO_PATH = '/img/photos/users';
 
     public function init()
     {
@@ -17,15 +18,15 @@ class Application_Form_AddUser extends Zend_Form
         $this->addElement($role);
 
         $login = $this->createElement('text', 'usersLogin');
-        $login->setLabel('Логин для этого пользователя:')
-            ->setAttrib('placeholder', 'Введите логин')
-            ->setRequired();
+        $login->setLabel('Логин для этого пользователя: *')
+            ->setAttrib('placeholder', 'Введите логин')            
+            ->setAttrib('required', 'required');
         $this->addElement($login);
 
         $password = $this->createElement('text', 'usersPassword');
-        $password->setLabel('Пароль для этого пользователся:')
+        $password->setLabel('Пароль для этого пользователся: *')
             ->setAttrib('placeholder', 'Введите пароль')
-            ->setRequired();
+            ->setAttrib('required', 'required');        
         $this->addElement($password);
 
         $status = $this->createElement('select', 'idStatus');
@@ -35,17 +36,17 @@ class Application_Form_AddUser extends Zend_Form
         $this->addElement($status);
 
         $firstName = $this->createElement('text', 'firstName');
-        $firstName->setLabel('Имя:')
+        $firstName->setLabel('Имя: *')
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Введите имя')
-            ->setRequired();
+            ->setAttrib('required', 'required');
         $this->addElement($firstName);
 
         $lastName = $this->createElement('text', 'lastName');
-        $lastName->setLabel('Фамилия:')
+        $lastName->setLabel('Фамилия: *')
             ->setValidators(array('Alpha'))
             ->setAttrib('placeholder', 'Введите фамилию')
-            ->setRequired();
+            ->setAttrib('required', 'required');
         $this->addElement($lastName);
         
         $patronymic = $this->createElement('text', 'patronymic');
@@ -61,14 +62,14 @@ class Application_Form_AddUser extends Zend_Form
         $this->addElement($birthday);
 
         $passport = $this->createElement('text', 'passport');
-        $passport->setLabel('Паспорт, серия/номер:')
-            ->setRequired()
+        $passport->setLabel('Паспорт, серия/номер: *')
+            ->setAttrib('required', 'required')
             ->setAttrib('placeholder', 'Паспорт, серия/номер');
         $this->addElement($passport);
 
         $inn = $this->createElement('text', 'inn');
-        $inn->setLabel('ИНН:')
-            ->setRequired()
+        $inn->setLabel('ИНН: *')
+            ->setAttrib('required', 'required')
             ->setValidators(array('Digits'))
             ->setAttrib('placeholder', 'Введите ИНН');
         $this->addElement($inn);
@@ -77,7 +78,7 @@ class Application_Form_AddUser extends Zend_Form
         $photo->setLabel('Фото:')
               ->addValidator('Size', false, 1024000)
               ->addValidator('Extension', false, 'jpg,png,gif')
-              ->setDestination('c:/xampp/htdocs/projects/levelup/public/img/photos/users') // Абсолютный путь
+              ->setDestination($_SERVER['DOCUMENT_ROOT'] .self::PHOTO_PATH)
               ->addFilter('Rename', substr(md5(microtime()), 0, 10).'.jpg');
         $this->addElement($photo);
 
@@ -125,7 +126,7 @@ class Application_Form_AddUser extends Zend_Form
             ->setAttrib('placeholder', 'Введите полный адрес')
             ->setAttrib('rows', '5');
         $this->addElement($address);
-
+        
         $this->addElement('submit', 'submit', array('label' => 'Сохранить', 'class' => ''));
 
     }

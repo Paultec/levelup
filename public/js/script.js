@@ -74,4 +74,32 @@ $(function(){
 		});
 	}	
 	setInterval(doMagicOut, 30000);	
+	
+	/* Псевдоссылка */
+	$('.fakeL').on('click', function(){
+		history.back();
+	});
+	
+	//Всплывающие фото
+	$('body').append($('<div id="showImgDiv" />'));
+	$('#showImgDiv').append($('<img src="/" />'));
+    function showImg(){
+		var dataImg = $(this).attr('data-img');
+		if(dataImg.slice(dataImg.length - 3) != 'jpg')
+			return false;
+		$("#showImgDiv img").attr('src',dataImg);
+		varTop = $(this).offset().top - 140;
+		varLeft = $(this).offset().left + 10;
+		$("#showImgDiv").css({"top":varTop,"left":varLeft}).stop(true,true).fadeIn();
+	}
+	function showImgOff(){		
+		$("#showImgDiv").stop(true,true).fadeOut();
+	}    
+	$('.text_img').hover(showImg,showImgOff);
+	
+	$('.text_img').each(function(){		
+		var dataImg = $(this).attr('data-img');
+		if(dataImg.slice(dataImg.length - 3) == 'jpg')
+			$(this).addClass('eye');
+	});
 });

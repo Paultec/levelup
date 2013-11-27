@@ -2,12 +2,14 @@
     <?php
     $role = new Application_Model_DbTable_UsersRole();
     $usersRole = $role->getUsersRole($this->idUsersRole);
+    
+    const PHOTO_PATH = '/img/photos/users/';
     ?>
-
-    <td><?php echo $this->id; ?></td>
+    
+    <td class="text_img" data-img="<?php echo PHOTO_PATH. $this->photo; ?>"><?php echo $this->lastName .' '. $this->firstName; ?></td>
     <td><?php echo $usersRole['usersRole']; ?></td>
-    <td><?php echo $this->firstName; ?></td>
     <td><?php echo $this->email; ?></td>
+    <td><?php echo $this->phone; ?></td>
 
     <td>
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'user', 'action'=>'get-info')); ?>">

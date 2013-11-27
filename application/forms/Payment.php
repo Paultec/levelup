@@ -8,7 +8,7 @@ class Application_Form_Payment extends Zend_Form
         $id = $this->createElement('hidden', 'id');
         $this->addElement($id);
 
-        $idStudent = $this->createElement('text', 'idStudent');
+        $idStudent = $this->createElement('hidden', 'idStudent');
         $this->addElement($idStudent);
 
         $date = $this->createElement('text', 'date');

@@ -2,12 +2,14 @@
     <?php
     $group = new Application_Model_DbTable_Groups();
     $currentGroup = $group->getGroup($this->idGroup);
+    
+    const PHOTO_PATH = '/img/photos/students/';
     ?>
-
-    <td><?php echo $this->id; ?></td>
-    <td><?php echo $this->nameStudent; ?></td>
-    <td><?php echo $this->lastNameStudent; ?></td>
+    
+    <td class="text_img" data-img="<?php echo PHOTO_PATH. $this->photo; ?>"><?php echo $this->lastNameStudent .' '. $this->nameStudent; ?></td>    
     <td><?php echo $currentGroup['name']; ?></td>
+    <td><?php echo $this->telMobCustomer; ?></td>
+    <td><?php echo $this->emailStudent; ?></td>
 
     <td>
         <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'students', 'action'=>'get-info')); ?>">

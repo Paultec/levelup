@@ -69,7 +69,7 @@ class UserController extends Zend_Controller_Action
         $currentUser = $user->getUser($id);
         $idUsers = $currentUser['id'];
         $idUsersRole = $currentUser['idUsersRole'];
-        $idStatus = $currentUser['idStatus'];
+        $idStatus = $currentUser['idStatus'];        
         $loginPass = new Application_Model_DbTable_UsersLogin();
         $currentUsersLoginPass = $loginPass->getUsersLoginPass($idUsers);
         $role = new Application_Model_DbTable_UsersRole();
@@ -108,13 +108,18 @@ class UserController extends Zend_Controller_Action
         }
         $this->view->form = $form;
     }
-
+    
     public function editAction()
     {
-        $form = new Application_Form_AddUser();
+        $form = new Application_Form_AddUser();        
         if ($this->_request->isPost()){
             if ($form->isValid($this->_request->getParams())){
                 $allValues = $form->getValues();
+                if(!$allValues['photo']){
+                    $user = new Application_Model_DbTable_UsersInfo();
+                    $currentUser = $user->getUser($allValues['id']);
+                    $allValues['photo'] = $currentUser['photo'];
+                }
                 $id = $this->_getParam('id');
 
                 $loginValues = array('usersLogin'=>null, 'usersPassword'=>null);
@@ -127,8 +132,9 @@ class UserController extends Zend_Controller_Action
 
                 $loginPass = new Application_Model_DbTable_UsersLogin();
                 $loginPass->editUsersLoginPass($id, $loginValues);
-
-                return $this->_forward('index');
+                
+                header('Location: /user');
+                //return $this->_forward('index');
             } else {
                 $id = $this->_getParam('id', 0);
                 if ($id > 0) {
