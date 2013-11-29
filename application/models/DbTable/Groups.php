@@ -20,5 +20,21 @@ class Application_Model_DbTable_Groups extends Zend_Db_Table_Abstract
         $select->order('name');
         return $this->fetchAll($select);
     }
+
+    public function addGroup($data)
+    {
+        return $this->insert($data);
+    }
+
+    public function editGroup($id, $data)
+    {
+        return $this->update($data, 'id='.(int)$id);
+    }
+
+    public function deleteGroup($id)
+    {
+        $this->delete('id IN(' . $id . ')');
+    }
+
 }
 
