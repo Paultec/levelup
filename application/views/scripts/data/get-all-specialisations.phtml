@@ -1,0 +1,18 @@
+<ul><li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'add-specialisation')) ?>">Добавить специальность</a></li></ul>
+<?php if (count($this->specialisations)) { ?>
+    <table>
+        <thead>
+        <tr>
+            <th>Название</th>
+            <th>Продолжительнось</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php echo $this->PartialLoop('/partials/specialisations-row.phtml', $this->specialisations) ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div>
+        Нет специальностей
+    </div>
+<?php } ?>

@@ -1,0 +1,22 @@
+<tr>
+    <td><?php echo $this->subject ?></td>
+    <td><?php echo $this->subjectDurations ?></td>
+
+    <td>
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'edit-subject')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="hidden" type="submit" name="editSubject" value="Редактировать" />
+                <i class="edit" title="Редактировать"></i>
+            </label>
+        </form>
+
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-subject')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="hidden" type="submit" name="deleteSubject" value="Удалить" />
+                <i class="cut" title="Удалить"></i>
+            </label>
+        </form>
+    </td>
+</tr>

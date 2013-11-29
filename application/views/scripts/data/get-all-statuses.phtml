@@ -1,0 +1,17 @@
+<ul><li><a href="<?php echo $this->url(array('controller'=>'data', 'action'=>'add-status')) ?>">Добавить статус</a></li></ul>
+<?php if (count($this->statuses)) { ?>
+    <table>
+        <thead>
+        <tr>
+            <th>Статус</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php echo $this->PartialLoop('/partials/statuses-row.phtml', $this->statuses) ?>
+        </tbody>
+    </table>
+<?php } else { ?>
+    <div>
+        Нет статусов
+    </div>
+<?php } ?>

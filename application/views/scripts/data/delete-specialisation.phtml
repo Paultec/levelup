@@ -1,0 +1,12 @@
+<?php
+$this->title = 'Удаление специальности';
+$this->headTitle($this->title);
+?>
+<p>Вы действительно хотите удалить специальность <?php echo $this->escape($this->specialisation['specialisation']); ?></p>
+<form method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-specialisation')); ?>">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->specialisation['id']; ?>" />
+        <input type="submit" name="delete" value="yes" />
+        <input type="submit" name="delete" value="no" />
+    </div>
+</form>

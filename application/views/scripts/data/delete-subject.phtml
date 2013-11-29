@@ -1,0 +1,12 @@
+<?php
+$this->title = 'Удаление предмета';
+$this->headTitle($this->title);
+?>
+<p>Вы действительно хотите удалить предмет<?php echo $this->escape($this->subject['subject']); ?></p>
+<form method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-subject')); ?>">
+    <div>
+        <input type="hidden" name="id" value="<?php echo $this->subject['id']; ?>" />
+        <input type="submit" name="delete" value="yes" />
+        <input type="submit" name="delete" value="no" />
+    </div>
+</form>

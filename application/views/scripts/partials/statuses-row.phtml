@@ -1,0 +1,21 @@
+<tr>
+    <td><?php echo $this->status ?></td>
+
+    <td>
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'edit-status')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="hidden" type="submit" name="editStatus" value="Редактировать" />
+                <i class="edit" title="Редактировать"></i>
+            </label>
+        </form>
+
+        <form class="" method="POST" action="<?php echo $this->url(array('controller'=>'data', 'action'=>'delete-status')); ?>">
+            <input type="hidden" name="id" value="<?php echo $this->id; ?>" />
+            <label>
+                <input class="hidden" type="submit" name="deleteStatus" value="Удалить" />
+                <i class="cut" title="Удалить"></i>
+            </label>
+        </form>
+    </td>
+</tr>
