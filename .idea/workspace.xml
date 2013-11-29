@@ -794,7 +794,12 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="89" column="80" selection-start="3629" selection-end="3629" vertical-scroll-proportion="-0.73567253">
-          <folding />
+          <folding>
+            <element signature="n#deleteSubjectAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <element signature="n#addSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <element signature="n#getSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSpecialisationsAction#0;n#DataController#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -828,7 +833,12 @@
     <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="314" column="12" selection-start="11196" selection-end="11196" vertical-scroll-proportion="-0.008284024">
-          <folding />
+          <folding>
+            <element signature="n#deleteSubjectAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <element signature="n#addSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <element signature="n#getSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <element signature="n#getAllSpecialisationsAction#0;n#DataController#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
