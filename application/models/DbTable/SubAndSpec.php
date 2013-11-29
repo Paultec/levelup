@@ -9,7 +9,11 @@ class Application_Model_DbTable_SubAndSpec extends Zend_Db_Table_Abstract
     {
         $select = $this->select();
         $select->where('idSpecialisation = ' . $id);
-        return $this->fetchAll($select);
+        $listSubject = $this->fetchAll($select);
+        foreach ($listSubject as $elem) {
+            $list[] = $elem['idSubject'];
+        }
+        return $list;
     }
 
     public function getSpecBySubject($id)

@@ -320,13 +320,22 @@ class DataController extends Zend_Controller_Action
                 $id = $this->_getParam('id');
                 print_r($formDataSpec);
                 $specialisation = new Application_Model_DbTable_Specialisation();
-                //$specialisation->editSpecialisation($id, $formDataSpec);
+                $specialisation->editSpecialisation($id, $formDataSpec);
                 return $this->_forward('get-all-specialisations', 'data');
             } else {
                 $id = $this->_getParam('id', 0);
                 if ($id > 0) {
                     $specialisation = new Application_Model_DbTable_Specialisation();
                     $form->populate($specialisation->getSpecialisation($id));
+                    $subjects = new Application_Model_DbTable_SubAndSpec();
+                    $listSubject = $subjects->getSubjectBySpec($id);
+                    print_r($listSubject);
+                    //foreach($listSubject as $elem) {
+
+                        //$form->subject->setAttrib('checked', 'checked');
+                    $form->idSubject->setAttrib('checked','checked');
+                    //}
+
                 }
             }
         }
