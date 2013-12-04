@@ -15,6 +15,18 @@ body{
 	background-repeat: no-repeat;
 }
 
+h1{
+	font-size: 24px;
+}
+
+h2{
+	font-size: 19px;
+}
+
+h3{
+	font-size: 18px;
+}
+
 strong{
 	font-weight: bold;
 }
@@ -154,6 +166,15 @@ input[type='text']:hover, input[type='password']:hover{
 form{
 	float: left;
 	margin: 5px;
+}
+
+/*Таблица информации*/
+.info{
+	margin: 20px;
+}
+
+.info td{
+	padding-right: 40px;
 }
 
 /*Кнопки-картинки*/
@@ -853,4 +874,16 @@ form{
 	padding-left: 15px;
 	background: url('/img/eye.png') no-repeat center left;
 	cursor: default;
+}
+
+/*Кнопки как ссылки*/
+form input.butAsL{
+	background: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	color: black !important;
+	border: none !important;
+	text-shadow: none !important;
+	box-shadow: none !important;
+	font: 16px 'PT Sans', Verdana, Arial, sans-serif;	
 }
