@@ -10,6 +10,7 @@ class Application_Form_Status extends Zend_Form
 
         $status = $this->createElement('text', 'status');
         $status->setLabel('Статус:')
+            ->setAttrib('required', 'required')
             ->setRequired()
             ->setAttrib('placeholder', 'Введите статус');
         $this->addElement($status);

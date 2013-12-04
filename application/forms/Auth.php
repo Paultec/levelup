@@ -28,6 +28,8 @@ class Application_Form_Auth extends Zend_Form
         $login = $this->createElement('text', 'usersLogin');
 
         $login->setLabel('Login:')
+            ->setAttrib('required', 'required')
+            ->setAttrib('autofocus', 'autofocus')
             ->setRequired()
             ->addFilter('StripTags')
             ->setAttrib('placeholder', 'Введите ваш login')
@@ -36,6 +38,7 @@ class Application_Form_Auth extends Zend_Form
 
         $password = $this->createElement('password', 'usersPassword');
         $password->setLabel('Пароль:')
+            ->setAttrib('required', 'required')
             ->setRequired()
             ->setAttrib('placeholder', 'Введите ваш пароль')
             ->setDecorators($decors);

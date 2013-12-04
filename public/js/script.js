@@ -16,6 +16,7 @@ $(function(){
 	
 	//Стилизация инпутов
 	$('input, select, textarea').styler().addClass('styler');
+	$(".butAsL").removeClass('styler');
 	
 	$( ".date" ).datepicker({
 		changeMonth: true,

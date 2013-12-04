@@ -7,9 +7,26 @@ $nameGroup = $group->getGroup($student['idGroup']);
 ?>
 
 <p>Вы смотрите студента: </p>
-'Имя'<h3><?php echo $this->escape($student['nameStudent']); ?></h3>
-'Фамилия'<h3><?php echo $this->escape($student['lastNameStudent']); ?></h3>
-'Фамилия заказчика'<h3><?php echo $this->escape($student['lastNameCustomer']); ?></h3>
-'Группа'<h3><?php echo $nameGroup['name']; ?></h3>
-'Номер договора'<h3><?php echo $this->escape($student['numberContract']); ?></h3>
+<table class="info">
+    <tr>
+        <td><strong>Имя:</strong><td>
+        <td><?php echo $this->escape($student['nameStudent']); ?><td>
+    </tr>
+    <tr>
+        <td><strong>Фамилия:</strong><td>
+        <td><?php echo $this->escape($student['lastNameStudent']); ?><td>
+    </tr>
+    <tr>
+        <td><strong>Фамилия заказчика:</strong><td>
+        <td><?php echo $this->escape($student['lastNameCustomer']); ?><td>
+    </tr>
+    <tr>
+        <td><strong>Группа:</strong><td>
+        <td><?php echo $nameGroup['name']; ?><td>
+    </tr>
+    <tr>
+        <td><strong>Номер договора:</strong><td>
+        <td><?php echo $this->escape($student['numberContract']); ?><td>
+    </tr>
+</table>
 <p class="fakeL">Назад</p>

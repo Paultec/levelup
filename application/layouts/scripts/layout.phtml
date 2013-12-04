@@ -25,16 +25,18 @@ $auth = Zend_Auth::getInstance();
     <div id="head">        
         <ul class="">
             <div id="personal">
-            <?php if ($auth->hasIdentity()){ echo '<strong>Вы:</strong>'; ?>
+            <?php if ($auth->hasIdentity()){ ?>
                 <li>
-                    <a href="" title="Мой профиль">
-                        <?php echo (!empty($auth->getIdentity()->usersLogin))?
-                            $auth->getIdentity()->usersLogin : $auth->getIdentity()->usersLogin
-                        ?>
-                    </a>
+                    <form action="<?php echo $this->url(array('controller'=>'user', 'action'=>'get-info')); ?>">
+                        <input type="hidden" value="<?php echo $auth->getIdentity()->idUsersInfo ;?>" name="id"/>
+                        <input type="submit" class="butAsL" title="Мой профиль" value="<?php echo $auth->getIdentity()->usersLogin ;?>" />
+                    </form><br /><br /><br />
+                    <form action="<?php echo $this->url(array('controller'=>'user', 'action'=>'logout')); ?>">
+                        <input type="submit" class="butAsL" value="Выйти" />
+                    </form>
                 </li>
-                <li><a href="<?php echo $this->url(array(), 'user-logout') ?>">Выйти</a></li></div>
-                <div id="controls">
+                </div>
+            <div id="controls">
                     <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'index')) ?>">Смотреть пользователей</a></li>
                     <li><a href="<?php echo $this->url(array('controller'=>'user', 'action'=>'add')) ?>">Добавить пользователя</a></li>
                     <li><a href="<?php echo $this->url(array('controller'=>'students', 'action'=>'index')) ?>">Смотреть студентов</a></li>
