@@ -28,9 +28,9 @@ class Application_Model_DbTable_SubAndSpec extends Zend_Db_Table_Abstract
         return $this->insert($data);
     }
 
-    public function deleteStatus($id)
+    public function deleteRegisterBySpec($id)
     {
-        $this->delete('id IN(' . $id . ')');
+        $this->delete('idSpecialisation = ' . $id);
     }
 
 }

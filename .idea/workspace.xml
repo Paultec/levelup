@@ -19,9 +19,9 @@
     <file path="/a.dummy" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381473850490" ignored="false" />
     <file path="/users-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384431665585" ignored="false" />
     <file path="/Classroom.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384931449514" ignored="false" />
-    <file path="/DataController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385740610972" ignored="false" />
+    <file path="/DataController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386598097888" ignored="false" />
     <file path="/index.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385128002803" ignored="false" />
-    <file path="/get-all-classrooms.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381498323246" ignored="false" />
+    <file path="/get-all-classrooms.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386596456151" ignored="false" />
     <file path="/classrooms-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381501715638" ignored="false" />
     <file path="/get-classroom.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381499276927" ignored="false" />
     <file path="/add-classroom.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1381500414702" ignored="false" />
@@ -63,16 +63,16 @@
     <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Category.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384503497573" ignored="false" />
     <file path="/Category.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384503497573" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/forms/AddGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677727177" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Goods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510907930" ignored="false" />
-    <file path="/Goods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384510899896" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Goods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386343349228" ignored="false" />
+    <file path="/Goods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386343317599" ignored="false" />
     <file path="/AddGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677385489" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/partials/goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677538198" ignored="false" />
     <file path="/goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677537269" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/controllers/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384938706903" ignored="false" />
-    <file path="/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384938614687" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/controllers/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386343544226" ignored="false" />
+    <file path="/GoodsController.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386343515598" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/add.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384507876551" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677577998" ignored="false" />
-    <file path="/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384677577998" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386343057521" ignored="false" />
+    <file path="/get-all.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386342972872" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/Manufacturer.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384676797751" ignored="false" />
     <file path="/Manufacturer.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384676797751" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/forms/IncomeGoods.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384767452068" ignored="false" />
@@ -89,13 +89,13 @@
     <file path="$PROJECT_DIR$/../rybhata/application/models/DbTable/RegTable.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384859011107" ignored="false" />
     <file path="/RegTable.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384858969317" ignored="false" />
     <file path="/delete.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384865853693" ignored="false" />
-    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/move-goods-table.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384872422110" ignored="false" />
-    <file path="/move-goods-table.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384870842883" ignored="false" />
+    <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/goods/move-goods-table.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386338811463" ignored="false" />
+    <file path="/move-goods-table.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386238708129" ignored="false" />
     <file path="$PROJECT_DIR$/../rybhata/application/views/scripts/partials/move-goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384871203116" ignored="false" />
     <file path="/move-goods-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384871201780" ignored="false" />
     <file path="/delete-classroom.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384931581538" ignored="false" />
     <file path="/Bootstrap.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1384937328619" ignored="false" />
-    <file path="/Specialisation.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385740135564" ignored="false" />
+    <file path="/Specialisation.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386337066124" ignored="false" />
     <file path="/Subjects.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385100210771" ignored="false" />
     <file path="/statuses-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385101094673" ignored="false" />
     <file path="/subjects-row.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385101245485" ignored="false" />
@@ -109,8 +109,9 @@
     <file path="/Subject.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385117664021" ignored="false" />
     <file path="/add-specialisation.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385129104714" ignored="false" />
     <file path="/get-all-specialisations.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385129271960" ignored="false" />
-    <file path="/SubAndSpec.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385739441256" ignored="false" />
+    <file path="/SubAndSpec.php" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386337389527" ignored="false" />
     <file path="/delete-specialisation.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1385387879517" ignored="false" />
+    <file path="/get-schedule-by-user.phtml" changelist="0efa2da8-0f03-47f1-8ba7-beb9c083b599" time="1386598226101" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -130,20 +131,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="get-info.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/views/scripts/students/get-info.phtml">
+      <file leaf-file-name="DataController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="8" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.phtml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="335" column="36" selection-start="12399" selection-end="12399" vertical-scroll-proportion="0.020118343">
+            <state line="189" column="0" selection-start="7251" selection-end="7251" vertical-scroll-proportion="-22.038462">
               <folding>
+                <element signature="e#3221#4254#0" expanded="false" />
+                <element signature="e#5505#6537#0" expanded="false" />
                 <element signature="n#deleteSubjectAction#0;n#DataController#0;n#!!top" expanded="false" />
                 <element signature="n#getSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
                 <element signature="n#getAllSpecialisationsAction#0;n#DataController#0;n#!!top" expanded="false" />
@@ -152,28 +146,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Specialisation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/Specialisation.php">
+      <file leaf-file-name="get-schedule-by-classroom.phtml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/data/get-schedule-by-classroom.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="35" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
+            <state line="17" column="9" selection-start="473" selection-end="473" vertical-scroll-proportion="-11.115385">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Specialisation.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/forms/Specialisation.php">
+      <file leaf-file-name="get-schedule-by-user.phtml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/views/scripts/data/get-schedule-by-user.phtml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="62" selection-start="1148" selection-end="1151" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SubAndSpec.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/models/DbTable/SubAndSpec.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="21" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
+            <state line="18" column="34" selection-start="490" selection-end="490" vertical-scroll-proportion="0.36213017">
               <folding />
             </state>
           </provider>
@@ -189,28 +174,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/application/views/scripts/data/delete-status.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/get-all-subjects.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/add-subject.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/delete-subject.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/edit-subject.phtml" />
-        <option value="$PROJECT_DIR$/application/forms/Subject.php" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/index.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/add-specialisation.phtml" />
-        <option value="$PROJECT_DIR$/application/views/scripts/data/get-all-specialisations.phtml" />
-        <option value="$PROJECT_DIR$/application/models/DbTable/Specialisation.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/data/delete-specialisation.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/data/edit-specialisation.phtml" />
         <option value="$PROJECT_DIR$/application/controllers/StudentsController.php" />
-        <option value="$PROJECT_DIR$/application/models/DbTable/SubAndSpec.php" />
-        <option value="$PROJECT_DIR$/application/forms/Specialisation.php" />
-        <option value="$PROJECT_DIR$/application/controllers/DataController.php" />
         <option value="$PROJECT_DIR$/application/forms/Status.php" />
         <option value="$PROJECT_DIR$/application/forms/AddUser.php" />
         <option value="$PROJECT_DIR$/application/forms/Auth.php" />
         <option value="$PROJECT_DIR$/application/views/scripts/students/get-info.phtml" />
         <option value="$PROJECT_DIR$/application/layouts/scripts/layout.phtml" />
         <option value="$PROJECT_DIR$/application/views/scripts/user/get-info.phtml" />
+        <option value="$PROJECT_DIR$/application/models/DbTable/SubAndSpec.php" />
+        <option value="$PROJECT_DIR$/application/forms/Specialisation.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/data/index.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/data/get-all-classrooms.phtml" />
+        <option value="$PROJECT_DIR$/application/views/scripts/data/get-schedule-by-classroom.phtml" />
+        <option value="$PROJECT_DIR$/application/controllers/DataController.php" />
+        <option value="$PROJECT_DIR$/application/views/scripts/data/get-schedule-by-user.phtml" />
       </list>
     </option>
   </component>
@@ -694,14 +673,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19156884" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20010673" sideWeight="0.67012686" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298731" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -789,89 +768,27 @@
     </PATH>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/forms/Classroom.php">
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/get-info.phtml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="314" column="12" selection-start="11196" selection-end="11196" vertical-scroll-proportion="0.0">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="n#deleteSubjectAction#0;n#DataController#0;n#!!top" expanded="false" />
-            <element signature="n#getSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
-            <element signature="n#getAllSpecialisationsAction#0;n#DataController#0;n#!!top" expanded="false" />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1386167934735" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/UsersInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/auth.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/user/add.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="34" selection-start="416" selection-end="416" vertical-scroll-proportion="0.36213017" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/Status.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="47" selection-start="318" selection-end="318" vertical-scroll-proportion="0.24142012" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/Auth.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="47" selection-start="1351" selection-end="1351" vertical-scroll-proportion="0.44260356" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/forms/AddUser.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="45" selection-start="1362" selection-end="1362" vertical-scroll-proportion="0.24970414" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="89" column="80" selection-start="3629" selection-end="3629" vertical-scroll-proportion="-0.73567253">
-          <folding>
-            <element signature="n#deleteSubjectAction#0;n#DataController#0;n#!!top" expanded="false" />
-            <element signature="n#getSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
-            <element signature="n#getAllSpecialisationsAction#0;n#DataController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/students/get-info.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="8" selection-start="924" selection-end="924" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/controllers/StudentsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="5" selection-start="5" selection-end="5" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/index.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="123" selection-start="592" selection-end="592" vertical-scroll-proportion="0.0">
-          <folding />
         </state>
       </provider>
     </entry>
@@ -882,50 +799,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/scripts/students/edit.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/layouts/scripts/layout.phtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="130" selection-start="1158" selection-end="1267" vertical-scroll-proportion="0.7443787" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Subjects.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/models/DbTable/SubAndSpec.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="21" selection-start="424" selection-end="424" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/models/DbTable/Specialisation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="35" selection-start="165" selection-end="165" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="7" column="35" selection-start="165" selection-end="165" vertical-scroll-proportion="0.051533744" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/forms/Specialisation.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="62" selection-start="1148" selection-end="1151" vertical-scroll-proportion="0.0">
+        <state line="34" column="36" selection-start="1323" selection-end="1323" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/index.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="140" selection-start="649" selection-end="649" vertical-scroll-proportion="0.18106508">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/SubAndSpec.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="51" selection-start="801" selection-end="801" vertical-scroll-proportion="0.64378697">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/students/get-info.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="8" selection-start="933" selection-end="933" vertical-scroll-proportion="0.6236686">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/add-classroom.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/add-group.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/add-specialisation.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/add-status.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/get-all-classrooms.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="23" selection-start="196" selection-end="196" vertical-scroll-proportion="0.040236685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/models/DbTable/Schedule.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/DataController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="335" column="36" selection-start="12399" selection-end="12399" vertical-scroll-proportion="0.020118343">
+        <state line="189" column="0" selection-start="7251" selection-end="7251" vertical-scroll-proportion="-22.038462">
           <folding>
+            <element signature="e#3221#4254#0" expanded="false" />
+            <element signature="e#5505#6537#0" expanded="false" />
             <element signature="n#deleteSubjectAction#0;n#DataController#0;n#!!top" expanded="false" />
             <element signature="n#getSpecialisationAction#0;n#DataController#0;n#!!top" expanded="false" />
             <element signature="n#getAllSpecialisationsAction#0;n#DataController#0;n#!!top" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/get-schedule-by-classroom.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="9" selection-start="473" selection-end="473" vertical-scroll-proportion="-11.115385">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/scripts/data/get-schedule-by-user.phtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="34" selection-start="490" selection-end="490" vertical-scroll-proportion="0.36213017">
+          <folding />
         </state>
       </provider>
     </entry>

@@ -1,4 +1,31 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Data</b> and script/action name <b>getScheduleByUser</b></p>
-</div>
+<?php
+$this->title = 'Просмотр расписания';
+$this->headTitle($this->title);
+?>
+
+<h3>Вы смотрите расписание преподавателя <?php echo array_shift($this->scheduleByUser);?>: </h3>
+
+<table>
+    <thead>
+    <tr>
+        <th></th><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
+    </tr>
+    <tr>
+        <th>Аудитория</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th>
+    </tr>
+    </thead>
+    <tbody>
+    <?php
+    foreach ($this->scheduleByUser as $schedule) {
+        echo '<tr>';
+        echo '<td>'.$schedule['Classroom'].'</td>';
+        echo '<td>'.$schedule['Mo'].'</td><td>'.$schedule['Tu'].'</td><td>'.$schedule['We'].'</td>';
+        echo '<td>'.$schedule['Th'].'</td><td>'.$schedule['Fr'].'</td><td>'.$schedule['Sa'].'</td><td>'.$schedule['Su'].'</td>';
+        echo '</tr>';
+    }
+    ?>
+    </tbody>
+</table>
+
+<h6>Вернуться к просмотру:</h6>
+<p class="fakeL">Назад</p>

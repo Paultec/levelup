@@ -10,7 +10,7 @@ class Application_Form_Specialisation extends Zend_Form
 
         $specialisation = $this->createElement('text', 'specialisation');
         $specialisation->setLabel('Название специальности:')
-            ->setValidators(array('Alnum'))
+            ->setAttrib('pattern', '[0-9a-zA-Zа-яА-Я.,- ]')
             ->setRequired()
             ->setAttrib('placeholder', 'Введите название');
         $this->addElement($specialisation);
@@ -31,7 +31,7 @@ class Application_Form_Specialisation extends Zend_Form
 
         $subject = new Zend_Form_Element_MultiCheckbox('idSubject', array('multiOptions' => $listSubject));
         $subject->setLabel('Выберите предметы для этой специальности:');
-      //  $subject->setAttrib('checked','checked');$subject->setAttrib('checked','checked');
+
         $this->addElement($subject);
 
         $this->addElement('submit', 'submit', array('label' => 'Сохранить', 'class' => ''));

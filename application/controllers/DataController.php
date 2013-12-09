@@ -138,7 +138,57 @@ class DataController extends Zend_Controller_Action
 
     public function getScheduleByUserAction()
     {
-        // action body
+        $id = $this->_getParam('id');
+        $schedule = new Application_Model_DbTable_Schedule();
+        $scheduleByUser = $schedule->getScheduleByUser($id);
+        $user = new Application_Model_DbTable_UsersInfo();
+        $usersName = $user->getUser($id)['lastName'].' '.$user->getUser($id)['firstName'];
+        $scheduleTable['user'] = $usersName;
+        $classrooms = array();
+        $currentSchedule = array();
+
+        foreach ($scheduleByUser as $elem) {
+            foreach ($elem as $key => $value) {
+                switch ($key)
+                {
+                    case 'idClassroom' :
+                        $classroom = new Application_Model_DbTable_Classroom();
+                        $currentClassroom = $classroom->getClassroom($value);
+                        $current['classroom'] = $currentClassroom['number'];
+                        $classrooms[] = $current['classroom'];
+                        break;
+                    case 'idGroup' :
+                        $group = new Application_Model_DbTable_Groups();
+                        $currentGroup = $group->getGroup($value);
+                        $current['group'] = 'группа '.$currentGroup['name'].'<br/> в '.$currentGroup['timeStartLession'];
+                        break;
+                    case 'idDay' :
+                        $current['day'] = $value;
+                        break;
+                }
+            }
+            $currentSchedule[] = $current;
+        }
+
+        $classrooms = array_unique($classrooms);
+        foreach ($classrooms as $val) {
+            $auditory[] = $val;
+        }
+
+        $days = array('Classroom', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su');
+        for ($count = 0; $count < count($auditory); ++$count) {
+            $scheduleRow = array_fill(0, 8, '');
+            $scheduleRow[0] = $auditory[$count];
+            foreach ($currentSchedule as $elem) {
+                if ($elem['classroom'] == $scheduleRow[0]) {
+                    $scheduleRow[$elem['day']] = $elem['group'];
+                }
+            }
+            $scheduleTableAssoc = array_combine($days, $scheduleRow);
+            $scheduleTable[] = $scheduleTableAssoc;
+        }
+
+        $this->view->scheduleByUser = $scheduleTable;
     }
 
     public function getScheduleByGroupAction()
@@ -314,13 +364,18 @@ class DataController extends Zend_Controller_Action
         if ($this->_request->isPost()){
             if ($form->isValid($this->_request->getParams())){
                 $formData = $form->getValues();
-                print_r($formData);
                 $subjectData = array('idSubject' => null);
                 $formDataSpec = array_diff_key($formData, $subjectData);
                 $id = $this->_getParam('id');
-                print_r($formDataSpec);
                 $specialisation = new Application_Model_DbTable_Specialisation();
                 $specialisation->editSpecialisation($id, $formDataSpec);
+                $register = new Application_Model_DbTable_SubAndSpec();
+                $register->deleteRegisterBySpec($id);
+                foreach ($formData['idSubject'] as $idSub) {
+                    $data = array('idSpecialisation' => $id, 'idSubject' => $idSub);
+
+                    $register->addRegister($data);
+                }
                 return $this->_forward('get-all-specialisations', 'data');
             } else {
                 $id = $this->_getParam('id', 0);
@@ -329,12 +384,8 @@ class DataController extends Zend_Controller_Action
                     $form->populate($specialisation->getSpecialisation($id));
                     $subjects = new Application_Model_DbTable_SubAndSpec();
                     $listSubject = $subjects->getSubjectBySpec($id);
-                    print_r($listSubject);
-                    //foreach($listSubject as $elem) {
+                    $form->idSubject->setValue($listSubject);
 
-                        //$form->subject->setAttrib('checked', 'checked');
-                    $form->idSubject->setAttrib('checked','checked');
-                    //}
 
                 }
             }
